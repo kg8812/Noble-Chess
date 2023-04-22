@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7130013273421072775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 58180258450786643}
+  - component: {fileID: 8127638442374732534}
+  m_Layer: 0
+  m_Name: Sins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &58180258450786643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130013273421072775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.971192, y: -0.18363518, z: 1.1709216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8127638442374732534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130013273421072775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4093fce1cc98e364cae6ab34a52953a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 1
+  normalCD: 1
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 0
+  skillImage: {fileID: 21300000, guid: 31c9f2362130cdb4db737b7b8811485f, type: 3}
+  skillName: "\uC8C4\uC545"
+  description: "\uBC94\uC704 \uB0B4\uC758 \uC801 1\uBA85\uC5D0\uAC8C \uACF5\uACA9\uB825
+    100% \uD53C\uD574\uB97C \uC900\uB2E4."

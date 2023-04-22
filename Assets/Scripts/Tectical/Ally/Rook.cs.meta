@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 26dd47bc09ed7a742a268e9a5805cee5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - square: {instanceID: 0}
+  - character: {instanceID: 0}
+  - image2D: {instanceID: 0}
+  - image3D: {instanceID: 0}
+  - tecticalImage: {fileID: 6929476067907313406, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

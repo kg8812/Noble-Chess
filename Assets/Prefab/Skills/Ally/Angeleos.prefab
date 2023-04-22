@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3012352223560720505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4964847230722108987}
+  - component: {fileID: 495684780910943267}
+  m_Layer: 0
+  m_Name: Angeleos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4964847230722108987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012352223560720505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495684780910943267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012352223560720505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08691cccb183177488087cfb1dd5a79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 7
+  normalCD: 7
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 1
+  cr: {fileID: 0}
+  isSpecial: 1
+  isTwice: 0
+  skillImage: {fileID: 21300000, guid: 68410f6f1104cb74c9a266dd1a60b1c7, type: 3}
+  skillName: "\uC559\uAC94\uB808\uC624\uC2A4"
+  description: "\uBC94\uC704 \uB0B4\uC5D0 \uC788\uB294 \uBAA8\uB4E0 \uC801 \uC5D0\uAC8C
+    \uC18D\uBC15 2\uD134 \uBD80\uC5EC, \uBAA8\uB4E0 \uC544\uAD70\uC5D0\uAC8C \uC18C\uC0DD
+    2 \uBD80\uC5EC\uB97C \uBD80\uC5EC\uD55C\uB2E4."

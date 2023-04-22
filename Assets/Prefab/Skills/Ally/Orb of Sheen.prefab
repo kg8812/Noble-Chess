@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3538716413930795016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840286293492065055}
+  - component: {fileID: 7570143549646180458}
+  m_Layer: 0
+  m_Name: Orb of Sheen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1840286293492065055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538716413930795016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7570143549646180458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538716413930795016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ab51e76dd0c304e986376870ee7398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 1
+  normalCD: 1
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 0
+  skillImage: {fileID: 21300000, guid: 10a91e64d0e3302499328f8da9c0223f, type: 3}
+  skillName: "\uAD11\uD718\uC758 \uAD6C\uCCB4"
+  description: "\uBC94\uC704 \uB0B4\uC758 \uBAAC\uC2A4\uD130 1 \uC5D0\uAC8C \uACF5\uACA9\uB825\uC758
+    80%\uC758 \uD53C\uD574\uB97C \uC785\uD788\uACE0 \uC801\uC911\uD55C \uB300\uC0C1\uC5D0\uAC8C
+    \uC1E0\uC57D 1 \uBD80\uC5EC"

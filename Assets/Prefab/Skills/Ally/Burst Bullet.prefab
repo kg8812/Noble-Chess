@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &677666530157016025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532536162142927782}
+  - component: {fileID: 4096678590999764800}
+  m_Layer: 0
+  m_Name: Burst Bullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1532536162142927782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677666530157016025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.000000063329935, z: 7.5212502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4096678590999764800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677666530157016025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88252916958c904b8cb55e68091d933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 1
+  normalCD: 1
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 0
+  isTwice: 0
+  skillImage: {fileID: 21300000, guid: 069ab325b4ba2bc4f88fb8b551959846, type: 3}
+  skillName: "\uBC84\uC2A4\uD2B8 \uBD88\uB9BF"
+  description: "\uBC94\uC704 \uB0B4\uC758 \uC801 1 \uAC1C\uCCB4\uB97C \uC9C0\uC815\uD574
+    \uC790\uC2E0\uC758 \uACF5\uACA9\uB825\uC758 100%\uC758 \uD53C\uD574\uB97C \uC785\uD788\uACE0
+    \uC790\uC2E0\uC758 \uACF5\uACA9\uB825\uC758 10%\uC758 \uBCF4\uD638\uB9C9\uC744
+    \uD68D\uB4DD\uD55C\uB2E4"
+  isEnhance: 0

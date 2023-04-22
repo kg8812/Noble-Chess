@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6612854396147868522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6612854396147868520}
+  - component: {fileID: 6612854396147868521}
+  m_Layer: 0
+  m_Name: Ring Of Snare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6612854396147868520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612854396147868522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.000000063329935, z: 7.5212502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6612854396147868521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612854396147868522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ffe09067e198742826b6d67be71f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 5
+  normalCD: 5
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 1
+  isTwice: 0
+  skillImage: {fileID: 21300000, guid: 1be686185fc0f9d47a127c71cfa63299, type: 3}
+  skillName: "\uC18D\uBC15\uC758 \uACE0\uB9AC"
+  description: "\uD544\uB4DC \uB0B4 \uC6D0\uD558\uB294 9\uCE78 \uB113\uC774\uC5D0
+    \uC704\uCE58\uD55C \uBAA8\uB4E0 \uC801 \uBAAC\uC2A4\uD130 \uC5D0\uAC8C \uC18D\uBC15\uC744
+    2 \uBD80\uC5EC\uD55C\uB2E4."

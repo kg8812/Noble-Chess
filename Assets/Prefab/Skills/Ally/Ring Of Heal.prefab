@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4919518045317577527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4919518045317577525}
+  - component: {fileID: 4919518045317577526}
+  m_Layer: 0
+  m_Name: Ring Of Heal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4919518045317577525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919518045317577527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.000000063329935, z: 7.5212502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4919518045317577526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919518045317577527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3154e562d121dc3479f0651f4942df1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 5
+  normalCD: 5
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 1
+  isTwice: 0
+  skillImage: {fileID: 21300000, guid: 0b8c9188171418b41a7a55165abecfb1, type: 3}
+  skillName: "\uCE58\uC720\uC758 \uACE0\uB9AC"
+  description: "\uD544\uB4DC \uB0B4 \uC6D0\uD558\uB294 9\uCE78 \uB113\uC774\uC5D0
+    \uC704\uCE58\uD55C \uC544\uAD70 \uD0DD\uD2F1\uCEEC\uC758 HP \uB97C \uB300\uC0C1\uC758
+    \uCD5C\uB300\uCCB4\uB825 20% \uB9CC\uD07C \uD68C\uBCF5 \uD55C\uB2E4.\r"

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8658996245599607941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8658996245599607943}
+  - component: {fileID: 8658996245599607940}
+  m_Layer: 0
+  m_Name: Desire Of Collector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8658996245599607943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658996245599607941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8658996245599607940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658996245599607941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f785bf1b3e31af143a6eb26022f5a3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 0
+  normalCD: 0
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 1
+  isTwice: 0
+  skillImage: {fileID: 21300000, guid: 24284eb0d49d45a4bb7ef7d4abf84595, type: 3}
+  skillName: "\uC218\uC9D1\uAC00\uC758 \uC695\uB9DD"
+  description: "*\uC218\uC9D1\uD488 10\uC2A4\uD0DD\uC744 \uC313\uC73C\uBA74 \uC2A4\uD0AC\uC744
+    \uC0AC\uC6A9 \uAC00\uB2A5\uD558\uB2E4.*\r\n\uBC94\uC704 \uB0B4\uC758 \uC544\uAD70
+    \uD55C \uBA85\uC744 \uC9C0\uC815\uD574 \uBAA8\uB4E0 \uC2A4\uD0AC\uC758 \uCFE8\uD0C0\uC784\uC744
+    \uCD08\uAE30\uD654 \uC2DC\uD0A4\uACE0 \uC99D\uD3ED2 \uAC15\uC778\uD568 2 \uBD80\uC5EC\r"

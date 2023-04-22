@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &341536257402311298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3272206591987473854}
+  - component: {fileID: 1460087149182201870}
+  m_Layer: 0
+  m_Name: SunSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3272206591987473854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341536257402311298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5057497, y: -0.4282213, z: 3.5602202}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1460087149182201870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341536257402311298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b702e143055119c4884f747ea18b54c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 5
+  normalCD: 5
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 1
+  isTwice: 0
+  skillImage: {fileID: 0}
+  skillName: "\uC885\uB9D0 \uD0C4\uC0DD"
+  description: "\uBC94\uC704 \uB0B4\uC5D0 \uBAA8\uB4E0 \uD0DD\uD2F1\uCEEC \uB4E4\uC5D0\uAC8C
+    \r\uACF5\uACA9\uB825\uC5D0 9999% \uD53C\uD574\uB97C \uC900\uB2E4.\r\n"
+  enemy: {fileID: 0}
+  priority: 2
+  atk: 9999

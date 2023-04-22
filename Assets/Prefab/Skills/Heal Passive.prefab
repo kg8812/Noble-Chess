@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6700427388253928954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69499294259962675}
+  - component: {fileID: 3636145564699931350}
+  m_Layer: 0
+  m_Name: Heal Passive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69499294259962675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700427388253928954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.717346, y: 1.2824707, z: 6.8687134}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3636145564699931350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700427388253928954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffec2c2740e20a74a8c9c787699c72fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 999999
+  normalCD: 999999
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 0
+  cr: {fileID: 0}
+  isSpecial: 0
+  isTwice: 0
+  skillImage: {fileID: 0}
+  skillName: "\uBCF4\uC88C"
+  description: "\uC0AC\uBA85\uC774 \uD0DD\uD2F1\uCEEC \uC5D0\uAC8C \uC900 \uD53C\uD574\uB7C9\uC758
+    70% \uB9CC\uD07C \u201C\uCC9C\uC0C1\uCC9C \uBA54\uB974\uC5D8\u201D \uC758 HP
+    \uAC00 \uD68C\uBCF5 \uB41C\uB2E4."
+  enemy: {fileID: 0}
+  priority: 0

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4821179992979776871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110865896806219851}
+  - component: {fileID: 4971648950168760580}
+  m_Layer: 0
+  m_Name: Blessing Of Bullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110865896806219851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4821179992979776871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4971648950168760580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4821179992979776871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca2bb19613cbea4eade0c47acea641a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCD: 2
+  normalCD: 2
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
+  isImmediate: 1
+  cr: {fileID: 0}
+  isSpecial: 0
+  skillImage: {fileID: 21300000, guid: e577e95198403ea4f94e398b203d7850, type: 3}
+  skillName: "\uD0C4\uD658\uC758 \uC740\uCD1D"
+  description: "\uC9C0\uC815\uB41C \uBC94\uC704\uB0B4\uC758 \uC801 1\uBA85\uC5D0\uAC8C
+    \uACF5\uACA9\uB825\uC758 120%\uC758 \uD53C\uD574\uB97C \uC785\uD78C\uB2E4. \uD604
+    \uBCF4\uC720\uD55C \uD0C4\uD658 \uC2A4\uD0DD\uC5D0 \uBE44\uB840\uD558\uC5EC\r
+    (\uBCF4\uC720\uD55C \uD0C4\uD658 * 5%) \uD53C\uD574\uB7C9\uC774 \uC99D\uAC00\uD55C\uB2E4.\r\n\uBCF4\uC720\uD55C
+    \uBAA8\uB4E0 \uD0C4\uD658\uC744 \uC783\uB294\uB2E4.\r\n"
