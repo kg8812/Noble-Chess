@@ -41,7 +41,9 @@ public class ChessPiece : MonoBehaviour
 
     
     public void Select() // 기물 선택
-    {               
+    {
+        if (!GameManager.Instance.isPlayerTurn) return;
+
         board.Cancel();
         board.ColorReset();
         board.selected = square;
