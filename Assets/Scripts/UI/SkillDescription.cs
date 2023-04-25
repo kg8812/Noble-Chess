@@ -4,16 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillDescription : MonoBehaviour
-{
-    public Image skillImage;
+{  
     public Text skillName;
     public Text description;
     public Text cd;
 
     public void Set(Skill skill)
-    {
-        skillImage.gameObject.SetActive(true);
-        skillImage.sprite = skill.skillImage;
+    {        
         skillName.text = skill.skillName;
         description.text = skill.description;
 
@@ -28,8 +25,7 @@ public class SkillDescription : MonoBehaviour
     }
 
     public void Set()
-    {
-        skillImage.gameObject.SetActive(false);
+    {       
         skillName.text = "";
         description.text = "";
         cd.text = "";
