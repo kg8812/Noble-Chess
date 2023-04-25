@@ -13,8 +13,12 @@ public class TurnManager : Singleton<TurnManager>
     Queue<Skill> skillQueue = new Queue<Skill>();
     bool isSkill = false;
     public Skill selectedSkill = null;
+    int count = 0;
+
     public void StartTurn()
-    {       
+    {
+        count++;
+        UIManager.Instance.turnCount.text = count.ToString();
         isMoved = false;
         selectedSkill = null;
         isSkillUsed = false;

@@ -19,6 +19,7 @@ public class UIManager : Singleton<UIManager>
     public GameObject moveButton;
     public GameObject cancelButton;
     public Image turnImage;
+    public Text turnCount;
 
     public void ShowText(string str,Color color, float time = 1)
     {
