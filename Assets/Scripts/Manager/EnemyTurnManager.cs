@@ -13,6 +13,9 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
     public ChessPiece selected;     // 이동할 기물   
     public List<ChessPiece> moveList = new List<ChessPiece>(); // 이동 목록
     Queue<ChessPiece> skillQueue = new Queue<ChessPiece>(); // 스킬 예약 목록
+
+    public Sprite turnImage;
+
     public void StartTurn()
     {
         for (int i = 0; i < pieces.Count; i++)
@@ -28,7 +31,7 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
         }
 
         ResetStates();
-        UIManager.Instance.ShowText("적의 턴입니다.", Color.black);
+        UIManager.Instance.ShowImage(turnImage);
 
         StartCoroutine(ProcessTurn());
     }

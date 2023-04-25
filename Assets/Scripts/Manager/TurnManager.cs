@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class TurnManager : Singleton<TurnManager>
-{   
+{
+    public Sprite turnImage;
+
     public bool isMoved = false;
     public bool isSkillUsed = false;    
 
@@ -18,7 +20,7 @@ public class TurnManager : Singleton<TurnManager>
         isSkillUsed = false;
         ChessBoard.Instance.Cancel();
         ChessBoard.Instance.ColorReset();
-        UIManager.Instance.ShowText("플레이어의 턴입니다.", Color.green);
+        UIManager.Instance.ShowImage(turnImage);
 
         for (int i = 0; i < ChessBoard.Instance.ally.Count; i++)
         {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BehaviourUI : MonoBehaviour
 {
+    [SerializeField] SkillDescription sd;
+
     private void OnEnable()
     {
         UIManager.Instance.illustration.sprite = ChessBoard.Instance.selected.piece.GetComponent<Creature>().portrait;
@@ -13,6 +15,15 @@ public class BehaviourUI : MonoBehaviour
         UIManager.Instance.cancelButton.SetActive(!isEnemy);
 
         Skill[] skills;
+
+        SkillIcon[] selects = UIManager.Instance.skillIcons;
+
+        for(int i = 0; i < selects.Length; i++)
+        {
+            selects[i].select.SetActive(false);
+        }
+
+        sd.Set();
 
         if (isEnemy)
         {

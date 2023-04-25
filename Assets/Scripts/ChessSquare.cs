@@ -66,6 +66,35 @@ public class ChessSquare : MonoBehaviour
             ChessBoard.Instance.ColorReset();
         }
     }
+
+    bool CheckSkillState()
+    {
+        Skill skill = TurnManager.Instance.selectedSkill;
+
+        if (TurnManager.Instance.isSkillUsed)
+        {
+            UIManager.Instance.ShowText("이번턴에 스킬을 사용하였습니다.", Color.red);
+            return false;
+        }
+        if (skill.cr.isSkillUsed)
+        {
+            UIManager.Instance.ShowText("이미 스킬을 사용하였습니다.", Color.red);
+            return false;
+        }
+        if (skill.cr.GetComponent<Character>().isReserved)
+        {
+            UIManager.Instance.ShowText("이미 스킬을 예약하였습니다.", Color.red);
+            return false;
+        }
+        if (skill.CurCD > 0)
+        {
+            UIManager.Instance.ShowText("스킬 쿨타임입니다.", Color.red);
+            return false;
+        }
+
+        return true;
+    }
+
     private void OnMouseDown()
     {
         ChessPiece selected = ChessBoard.Instance.selected?.piece;
@@ -80,6 +109,9 @@ public class ChessSquare : MonoBehaviour
                 break;
 
             case SquareState.Attack:
+
+                if (!CheckSkillState()) break;
+
                 if (piece == null || !piece.gameObject.CompareTag("Enemy"))
                 {
                     UIManager.Instance.ShowText("적이 없습니다.", Color.red);
@@ -90,6 +122,9 @@ public class ChessSquare : MonoBehaviour
                 break;
 
             case SquareState.Buff:
+
+                if (!CheckSkillState()) break;
+
                 if (piece == null || !piece.gameObject.CompareTag("Ally"))
                 {
                     UIManager.Instance.ShowText("아군이 없습니다.", Color.red);
@@ -102,6 +137,8 @@ public class ChessSquare : MonoBehaviour
 
             case SquareState.Place:
 
+                if (!CheckSkillState()) break;
+
                 if (piece != null)
                 {
                     UIManager.Instance.ShowText("기물이 있는곳에 할 수 없습니다.", Color.red);
@@ -113,6 +150,8 @@ public class ChessSquare : MonoBehaviour
                 break;
 
             case SquareState.Range:
+
+                if (!CheckSkillState()) break;
 
                 StartCoroutine(ReserveSkill());
 

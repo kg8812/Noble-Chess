@@ -12,6 +12,7 @@ public class SkillDescription : MonoBehaviour
 
     public void Set(Skill skill)
     {
+        skillImage.gameObject.SetActive(true);
         skillImage.sprite = skill.skillImage;
         skillName.text = skill.skillName;
         description.text = skill.description;
@@ -24,5 +25,13 @@ public class SkillDescription : MonoBehaviour
         {
             cd.text = "";
         }
+    }
+
+    public void Set()
+    {
+        skillImage.gameObject.SetActive(false);
+        skillName.text = "";
+        description.text = "";
+        cd.text = "";
     }
 }

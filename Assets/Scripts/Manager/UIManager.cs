@@ -18,14 +18,24 @@ public class UIManager : Singleton<UIManager>
     public SpecialEffectUI specialSkillUI;
     public GameObject moveButton;
     public GameObject cancelButton;
+    public Image turnImage;
+
     public void ShowText(string str,Color color, float time = 1)
     {
+        turnImage.gameObject.SetActive(false);
         errorText.gameObject.SetActive(true);
         errorText.text = str;
         errorText.color = color;
         StartCoroutine(Disable(errorText.gameObject, time));
     }
 
+    public void ShowImage(Sprite image)
+    {
+        errorText.gameObject.SetActive(false);
+        turnImage.gameObject.SetActive(true);
+        turnImage.sprite = image;
+        StartCoroutine(Disable(turnImage.gameObject, 1));
+    }
     IEnumerator Disable(GameObject obj,float time)
     {
         yield return new WaitForSeconds(time);
