@@ -40,6 +40,8 @@ public class Skill : MonoBehaviour
             else return false;
         }
     }
+
+    public bool isPassive;
     public Sprite skillImage;
     public string skillName;
     [TextArea]

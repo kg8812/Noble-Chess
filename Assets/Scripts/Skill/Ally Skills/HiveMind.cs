@@ -17,8 +17,10 @@ public class HiveMind : Skill
         base.Use();
         Snare sn = gameObject.AddComponent<Snare>();
 
-        for (int i = x + 1; i <= x + 2 && 0 <= i && i < 8; i++)
+        for (int i = x + 1; i <= x + 2; i++)
         {
+            if (!(0 <= i && i < 8)) continue;
+
             if (board.Squares[i, y].piece.GetComponent<Enemy>())
             {
                 targetPiece = board.Squares[i, y].piece;

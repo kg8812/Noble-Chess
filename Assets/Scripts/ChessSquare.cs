@@ -91,7 +91,11 @@ public class ChessSquare : MonoBehaviour
             UIManager.Instance.ShowText("스킬 쿨타임입니다.", Color.red);
             return false;
         }
-
+        if (skill.cr.GetComponent<Collection>() != null && skill.cr.GetComponent<Collection>().count<10)
+        {
+            UIManager.Instance.ShowText("수집품을 10개이상 모아야 합니다.", Color.red);
+            return false;
+        }
         return true;
     }
 

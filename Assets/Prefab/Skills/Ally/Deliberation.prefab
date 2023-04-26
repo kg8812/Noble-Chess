@@ -51,6 +51,7 @@ MonoBehaviour:
   cr: {fileID: 0}
   isSpecial: 0
   isTwice: 0
+  isPassive: 1
   skillImage: {fileID: 21300000, guid: d4b5685928e8c5248ac08ad98b1728ab, type: 3}
   skillName: "\uC2E0\uC911\uD568"
   description: "\uD134 \uC885\uB8CC\uC2DC \uD0C4\uD658 1 \uB97C \uD68D\uB4DD\uD55C\uB2E4.\r\n\uBCF4\uC720\uD55C

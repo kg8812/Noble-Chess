@@ -51,6 +51,7 @@ MonoBehaviour:
   cr: {fileID: 0}
   isSpecial: 0
   isTwice: 0
+  isPassive: 1
   skillImage: {fileID: 0}
   skillName: "\uBCF4\uC88C"
   description: "\uC0AC\uBA85\uC774 \uD0DD\uD2F1\uCEEC \uC5D0\uAC8C \uC900 \uD53C\uD574\uB7C9\uC758

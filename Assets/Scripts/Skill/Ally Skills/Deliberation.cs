@@ -6,11 +6,11 @@ public class Deliberation : Skill
 {
     public override void Ready()
     {
-        
+        base.Ready();
     }
 
     public override void Use()
     {
-        
+        base.Use();
     }
 }

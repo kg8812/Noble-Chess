@@ -8,15 +8,29 @@ public class SkillDescription : MonoBehaviour
     public Text skillName;
     public Text description;
     public Text cd;
+    public Text skillType;
 
     public void Set(Skill skill)
     {        
         skillName.text = skill.skillName;
         description.text = skill.description;
 
-        if (skill.CurCD < 100)
+        if (skill.isPassive)
         {
-            cd.text = skill.CurCD.ToString();
+            skillType.text = "패시브";
+        }
+        else if (skill.isImmediate)
+        {
+            skillType.text = "즉발형";
+        }
+        else
+        {
+            skillType.text = "예약형";
+        }
+
+        if (!skill.isPassive)
+        {
+            cd.text = skill.CurCD.ToString()+"/"+skill.NormalCD.ToString();
         }
         else
         {
@@ -29,5 +43,6 @@ public class SkillDescription : MonoBehaviour
         skillName.text = "";
         description.text = "";
         cd.text = "";
+        skillType.text = "";
     }
 }

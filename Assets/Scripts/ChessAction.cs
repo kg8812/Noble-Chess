@@ -16,11 +16,14 @@ public class ChessAction : MonoBehaviour
         int x2 = index1 + range;
         int y2 = index2 + range;
 
-        for (int i = x1; i <= x2 && 0 <= i && i < 8; i++)
+        for (int i = x1; i <= x2; i++)
         {
-            for (int j = y1; j <= y2 && 0 <= j && j < 8; j++)
+            if (i < 0 || 8 <= i) continue;
+
+            for (int j = y1; j <= y2; j++)
             {
                 if (i == index1 && j == index2) continue;
+                if (j < 0 || 8 <= j) continue;
                 ChangeState(i, j, state);
             }
         }
@@ -48,11 +51,13 @@ public class ChessAction : MonoBehaviour
         int y2 = index2 + range;
         List<ChessSquare> list = new List<ChessSquare>();
 
-        for (int i = x1; i <= x2 && 0 <= i && i < 8; i++)
+        for (int i = x1; i <= x2; i++)
         {
+            if (!(0 <= i && i < 8)) continue;
             for (int j = y1; j <= y2 && 0 <= j && j < 8; j++)
             {
                 if (i == index1 && j == index2) continue;
+                if (!(0 <= j && j < 8)) continue;
 
                 if (check(i, j, isAlly)) list.Add(Squares[i, j]);
             }
@@ -62,7 +67,7 @@ public class ChessAction : MonoBehaviour
     public bool ChangeState(int a, int b,ChessSquare.SquareState state)
     {
         if (0 <= a && a < 8 && 0 <= b && b < 8)
-        {
+        {            
             if (state == ChessSquare.SquareState.Move && Squares[a, b].piece != null) 
             {
                 return false;

@@ -6,8 +6,7 @@ public class FoxFinish : Skill
 {
     public override void Ready()
     {
-        base.Ready();
-
+        base.Ready();       
         board.action.ActionInRange(2, x, y, ChessSquare.SquareState.Range);
     }
     public override void Use()
@@ -16,10 +15,14 @@ public class FoxFinish : Skill
         int count = cr.GetComponent<FoxFireStack>().count;
 
         float dmg = 100 + 50 * count;
-        for (int i = x - 2; i <= x + 2 && 0 <= i && i < 8; i++)
+        for (int i = x - 2; i <= x + 2; i++)
         {
-            for (int j = y - 2; j <= y + 2 && 0 <= j && j < 8; j++)
+            if (!(0 <= i && i < 8)) continue;
+
+            for (int j = y - 2; j <= y + 2; j++)
             {
+                if (!(0 <= j && j < 8)) continue;
+
                 targetPiece = board.Squares[i, j].piece;
                 AddTarget();
             }

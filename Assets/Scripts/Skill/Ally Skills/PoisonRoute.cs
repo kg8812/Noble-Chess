@@ -18,8 +18,10 @@ public class PoisonRoute : Skill
     {
         base.Use();
         bool isUsed = false;
-        for (int i = y - 1; i <= y + 1 && 0 <= i && i < 8; i++)
+        for (int i = y - 1; i <= y + 1; i++)
         {
+            if (!(0 <= i && i < 8)) continue;
+
             targetPiece = board.Squares[x + 1, i].piece;
             if (targetPiece?.GetComponent<Enemy>() != null)
             {

@@ -21,10 +21,14 @@ public class Divine : Skill
     {
         base.Use();
 
-        for (int i = x + 1; i <= x + 3 && 0 <= i && i < 8; i++) 
+        for (int i = x + 1; i <= x + 3; i++) 
         {
-            for (int j = y - 1; j <= y + 1 && 0 <= j && j < 8; j++)
+            if (!(0 <= i && i < 8)) continue;
+
+            for (int j = y - 1; j <= y + 1; j++)
             {
+                if (!(0 <= j && j < 8)) continue;
+
                 targetPiece = board.Squares[i, j].piece;
                 AddTarget();
 
