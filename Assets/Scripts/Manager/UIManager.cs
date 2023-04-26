@@ -19,6 +19,8 @@ public class UIManager : Singleton<UIManager>
     public GameObject moveButton;
     public GameObject cancelButton;
     public Image turnImage;
+    public Image turnImage2;
+
     public Text turnCount;
 
     public void ShowText(string str,Color color, float time = 1)
@@ -30,12 +32,13 @@ public class UIManager : Singleton<UIManager>
         StartCoroutine(Disable(errorText.gameObject, time));
     }
 
-    public void ShowImage(Sprite image)
-    {
-        errorText.gameObject.SetActive(false);
-        turnImage.gameObject.SetActive(true);
-        turnImage.sprite = image;
+    public void ShowTurnImage(bool isEnemy)
+    {        
+        turnImage.gameObject.SetActive(isEnemy);
+        turnImage2.gameObject.SetActive(!isEnemy);
+
         StartCoroutine(Disable(turnImage.gameObject, 1));
+        StartCoroutine(Disable(turnImage2.gameObject, 1));
     }
     IEnumerator Disable(GameObject obj,float time)
     {

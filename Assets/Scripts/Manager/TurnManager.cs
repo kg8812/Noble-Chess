@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class TurnManager : Singleton<TurnManager>
 {
-    public Sprite turnImage;
 
     public bool isMoved = false;
     public bool isSkillUsed = false;    
@@ -24,7 +23,7 @@ public class TurnManager : Singleton<TurnManager>
         isSkillUsed = false;
         ChessBoard.Instance.Cancel();
         ChessBoard.Instance.ColorReset();
-        UIManager.Instance.ShowImage(turnImage);
+        UIManager.Instance.ShowTurnImage(false);
 
         for (int i = 0; i < ChessBoard.Instance.ally.Count; i++)
         {
