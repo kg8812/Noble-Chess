@@ -23,9 +23,7 @@ public class RingOfBonding : Skill
     }
 
     public override void Use()
-    {
-        base.Use();
-
+    {       
         if (isFirst)
         {
             for (int i = 0; i < 8; i++)
@@ -40,6 +38,7 @@ public class RingOfBonding : Skill
         }
         else if (!isFirst)
         {
+            base.Use();
             target.StartMove(targetSquare);
             isTwice = false;
             isFirst = true;
