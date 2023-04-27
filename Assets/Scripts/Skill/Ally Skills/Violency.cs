@@ -41,7 +41,7 @@ public class Violency : Skill
             targetPiece = targetList[i];
             if (Attack(110))
             {
-                cr.GetComponent<FoxFireStack>().Count += 2;
+                cr.GetComponent<FoxFireStack>().count += 2;
             }
         }
     }

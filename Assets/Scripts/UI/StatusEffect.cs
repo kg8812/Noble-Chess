@@ -8,7 +8,7 @@ public class StatusEffect : MonoBehaviour,IPointerExitHandler,IPointerEnterHandl
 {
     [SerializeField] Image statusImage;
     [SerializeField] Text duration;
-    Buff buff;
+    public Buff buff { get; private set; }
     StatusDescription description { get { return UIManager.Instance.statusDescription; } }
     public void OnPointerExit(PointerEventData eventData)
     {
@@ -21,7 +21,10 @@ public class StatusEffect : MonoBehaviour,IPointerExitHandler,IPointerEnterHandl
         description.transform.position = transform.position + Vector3.left * 40;
         description.Set(buff);
     }
-
+    private void Update()
+    {
+        Set(buff);
+    }
     public void Set(Buff bf)
     {
         this.buff = bf;

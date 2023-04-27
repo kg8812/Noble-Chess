@@ -7,8 +7,7 @@ public class BehaviourUI : MonoBehaviour
 {
     [SerializeField] SkillDescription sd;
     [SerializeField] Image hpbar;
-    [SerializeField] GameObject statusPref;
-
+    [SerializeField] GameObject statusPref;   
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
     private void OnEnable()
     {       
@@ -63,7 +62,7 @@ public class BehaviourUI : MonoBehaviour
     }
     
     void SetStatusIcons()
-    {
+    {       
         Creature cr = pi.GetComponent<Creature>();
 
         Buff[] buffs = cr.GetComponents<Buff>();
@@ -73,12 +72,12 @@ public class BehaviourUI : MonoBehaviour
             if (buffs[i].count > 100) continue;
 
             StatusEffect se = Instantiate(statusPref, transform.Find("Status Effects").transform).GetComponent<StatusEffect>();
-            se.Set(buffs[i]);
+            se.Set(buffs[i]);            
         }
     }
 
     private void Update()
     {
-        hpbar.fillAmount = pi.GetComponent<Creature>().CurHp / pi.GetComponent<Creature>().MaxHp;
+        hpbar.fillAmount = pi.GetComponent<Creature>().CurHp / pi.GetComponent<Creature>().MaxHp;       
     }
 }
