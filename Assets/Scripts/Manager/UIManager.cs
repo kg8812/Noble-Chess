@@ -22,6 +22,7 @@ public class UIManager : Singleton<UIManager>
     public Image turnImage2;
 
     public Text turnCount;
+    public StatusDescription statusDescription;
 
     public void ShowText(string str,Color color, float time = 1)
     {

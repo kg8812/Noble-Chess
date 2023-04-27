@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Snare : Buff
 {
-    bool isMove;   
+    bool isMove;
 
+    private void OnEnable()
+    {
+        statusName = "속박";
+        description = "이동에 방해를 받는다";
+    }
     private void Start()
     {
         if (piece == null) return;

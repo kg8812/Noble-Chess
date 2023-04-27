@@ -21,8 +21,7 @@ public class ChessAction : MonoBehaviour
             if (i < 0 || 8 <= i) continue;
 
             for (int j = y1; j <= y2; j++)
-            {
-                if (i == index1 && j == index2) continue;
+            {                
                 if (j < 0 || 8 <= j) continue;
                 ChangeState(i, j, state);
             }

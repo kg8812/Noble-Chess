@@ -5,6 +5,12 @@ using UnityEngine;
 public class Revival : Buff, IOnHit,IOnEndTurn
 {
     bool isUsed = false;
+
+    private void OnEnable()
+    {
+        statusName = "소생";
+        description = "유닛의 체력이 1 이하로 내려가는 피해를 1회 막고 해당 턴에 무적이 된다.";
+    }
     public float UseAbility(float curHp)
     {
         if (curHp <= 0)

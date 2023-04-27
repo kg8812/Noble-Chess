@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BehaviourUI : MonoBehaviour
 {
     [SerializeField] SkillDescription sd;
+    [SerializeField] Image hpbar;
+    [SerializeField] GameObject statusPref;
 
+    ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
     private void OnEnable()
-    {
-        UIManager.Instance.illustration.sprite = ChessBoard.Instance.selected.piece.GetComponent<Creature>().portrait;
-        bool isEnemy = ChessBoard.Instance.selected.piece.gameObject.CompareTag("Enemy");
+    {       
+        UIManager.Instance.illustration.sprite = pi.GetComponent<Creature>().portrait;
+        bool isEnemy = pi.gameObject.CompareTag("Enemy");
 
         UIManager.Instance.moveButton.SetActive(!isEnemy);
         UIManager.Instance.cancelButton.SetActive(!isEnemy);
@@ -22,6 +26,8 @@ public class BehaviourUI : MonoBehaviour
         {
             selects[i].select.SetActive(false);
         }
+
+        SetStatusIcons();
 
         sd.Set();
 
@@ -55,6 +61,24 @@ public class BehaviourUI : MonoBehaviour
             }
         }
     }
-
     
+    void SetStatusIcons()
+    {
+        Creature cr = pi.GetComponent<Creature>();
+
+        Buff[] buffs = cr.GetComponents<Buff>();
+
+        for(int i = 0; i < buffs.Length; i++)
+        {
+            if (buffs[i].count > 100) continue;
+
+            StatusEffect se = Instantiate(statusPref, transform.Find("Status Effects").transform).GetComponent<StatusEffect>();
+            se.Set(buffs[i]);
+        }
+    }
+
+    private void Update()
+    {
+        hpbar.fillAmount = pi.GetComponent<Creature>().CurHp / pi.GetComponent<Creature>().MaxHp;
+    }
 }

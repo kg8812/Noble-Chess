@@ -9,7 +9,7 @@ public class FoxFire : Skill
         base.Use();
         Attack(120);
 
-        cr.GetComponent<FoxFireStack>().count += 2;
+        cr.GetComponent<FoxFireStack>().Count += 2;
     }
 
     public override void Ready()

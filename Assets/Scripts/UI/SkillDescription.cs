@@ -28,7 +28,7 @@ public class SkillDescription : MonoBehaviour
             skillType.text = "예약형";
         }
 
-        if (!skill.isPassive)
+        if (!skill.isPassive && skill.CurCD < 100 && skill.NormalCD > 0)
         {
             cd.text = skill.CurCD.ToString()+"/"+skill.NormalCD.ToString();
         }

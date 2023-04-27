@@ -43,14 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd88bd9c9ba1ee45ba71d87716c2efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCD: 4
-  normalCD: 0
+  startCD: 5
+  normalCD: 5
   targetSquare: {fileID: 0}
   targetPiece: {fileID: 0}
   isImmediate: 0
   cr: {fileID: 0}
   isSpecial: 0
   isTwice: 0
+  isPassive: 0
   skillImage: {fileID: 0}
   skillName: "\uAC01\uC131"
   description: "\uD544\uB4DC\uC5D0 \u201C\uCC9C\uC0C1\uCC9C \uBA54\uB974\uC5D8\u201D

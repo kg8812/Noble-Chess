@@ -12,7 +12,7 @@ public class FoxFinish : Skill
     public override void Use()
     {
         base.Use();
-        int count = cr.GetComponent<FoxFireStack>().count;
+        int count = cr.GetComponent<FoxFireStack>().Count;
 
         float dmg = 100 + 50 * count;
         for (int i = x - 2; i <= x + 2; i++)
@@ -33,6 +33,6 @@ public class FoxFinish : Skill
             targetPiece = targetList[i];
             Attack(dmg);
         }
-        cr.GetComponent<FoxFireStack>().count = 0;
+        cr.GetComponent<FoxFireStack>().Count = 0;
     }
 }
