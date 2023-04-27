@@ -1851,11 +1851,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Error Text
       objectReference: {fileID: 0}
-    - target: {fileID: 100216967406924481, guid: e86ae57dacb833940a6493e7a669dabf,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 100216967406924484, guid: e86ae57dacb833940a6493e7a669dabf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2039,11 +2034,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456085910}
     m_Modifications:
-    - target: {fileID: 3909496402273657825, guid: 7cc1eee7482b45f4a80e382e94672e65,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4203767446174061547, guid: 7cc1eee7482b45f4a80e382e94672e65,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2157,16 +2147,6 @@ PrefabInstance:
     - target: {fileID: 4349949610562803862, guid: 7cc1eee7482b45f4a80e382e94672e65,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573229851836344091, guid: 7cc1eee7482b45f4a80e382e94672e65,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6223265302678668579, guid: 7cc1eee7482b45f4a80e382e94672e65,
-        type: 3}
-      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2396,11 +2376,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Attack Cancel Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 5751066588565737737, guid: 4403ea00a7758b5438d9ec2b58bb1a02,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5751066588565737738, guid: 4403ea00a7758b5438d9ec2b58bb1a02,
         type: 3}
@@ -3071,11 +3046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Discovered Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415927885130358546, guid: f3a484620261a8240b1ee9cd2bb65bff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7946879768118613088, guid: f3a484620261a8240b1ee9cd2bb65bff,
         type: 3}
