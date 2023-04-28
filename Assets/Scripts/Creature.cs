@@ -47,6 +47,7 @@ public class Creature : MonoBehaviour, IOnNewTurn, IOnDamage
     public SpriteRenderer render; // 스프라이트 렌더러 (캐릭터 이미지용)    
     public Sprite portrait;
     public bool isInvincible = false;
+    public Sprite iconImage;
     protected virtual void Awake()
     {
         render = GetComponentInChildren<SpriteRenderer>();

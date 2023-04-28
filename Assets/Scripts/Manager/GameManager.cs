@@ -6,9 +6,11 @@ using static TurnManager;
 public class GameManager : Singleton<GameManager>
 {
     public bool isPlayerTurn { get; private set; }
+    private bool isGameOver;
 
     private void Start()
     {
+        isGameOver = false;
         isPlayerTurn = true;
     }
 
@@ -27,5 +29,10 @@ public class GameManager : Singleton<GameManager>
 
         ChessBoard.Instance.Cancel();
         ChessBoard.Instance.ColorReset();
+    }
+
+    public void GameOver()
+    {
+        isGameOver = true;
     }
 }

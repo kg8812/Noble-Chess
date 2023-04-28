@@ -124,6 +124,7 @@ MonoBehaviour:
   render: {fileID: 0}
   portrait: {fileID: 21300000, guid: 69c27457d0ea1df4ca577b36d8b97141, type: 3}
   isInvincible: 0
+  iconImage: {fileID: 21300000, guid: 92bcf7b0d1db4644193e23cd3e7e4a67, type: 3}
   target: {fileID: 0}
   skills:
   - {fileID: 7526403901011731856, guid: 364288672f27a1b42ba54ed98a589801, type: 3}

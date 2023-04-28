@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Weakness : Buff, IOnDmgBuff
 {
-    private void OnEnable()
+    private void Start()
     {
         statusName = "쇠약";
         description = "공격력이 10% 감소한다";
+        image = sm.weakness.image;
     }
     public float GetBuff(float dmg)
     {

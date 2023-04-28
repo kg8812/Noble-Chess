@@ -12,7 +12,12 @@ public class Mia : Character,IOnEndTurn
         base.Awake();
         gameObject.AddComponent<BulletBuff>();
     }
-   
+
+    protected override void Start()
+    {
+        base.Start();      
+
+    }
     public void EndTurn()
     {
         if (bullet.count < 4) bullet.count++;

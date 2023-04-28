@@ -921,6 +921,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67147db6206fef24ea4e00722446c7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1328598505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328598507}
+  - component: {fileID: 1328598506}
+  m_Layer: 0
+  m_Name: Stauts Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1328598506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328598505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9817971bb6f884fb3a7f6f498427cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplification: {fileID: 5471485856926468557, guid: 52c94b1f7c1661e41b92c3e8bb34986b,
+    type: 3}
+  frality: {fileID: 3237415951973595335, guid: 9f2d0d3d17424b24396b6007d9e47baf, type: 3}
+  toughness: {fileID: 513086497665752011, guid: e7fb14452aa52924e8b44f9eedb3296f,
+    type: 3}
+  foxFireStack: {fileID: 3709289552807321088, guid: 997bedf95dec01743906c8fcd6c93f8c,
+    type: 3}
+  rBlood: {fileID: 3830612835743776090, guid: 95d217428d4fb8c40b3913fd51f3fdf3, type: 3}
+  snare: {fileID: 4850174326655226389, guid: 4d9c193d75f6303418180f796680e9ff, type: 3}
+  bulletBuff: {fileID: 7388314545881622395, guid: e8db14e8d5114b344913b4e6a24a7003,
+    type: 3}
+  collection: {fileID: 3244382686093427258, guid: ff9f019b532663741889109b803a8f75,
+    type: 3}
+  weakness: {fileID: 7327265401035692666, guid: bbee910ebe07c9f4ebc19efe0732ed99,
+    type: 3}
+  barrier: {fileID: 4814612633853971248, guid: c6ad1f024f0cf12408f6201f3d08a386, type: 3}
+  revival: {fileID: 8998550510327630898, guid: 82168610cb291734b8d7379f43435755, type: 3}
+--- !u!4 &1328598507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328598505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1694.8639, y: 353.54184, z: -103.09315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1340496023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7723993695488518424, guid: 9a8be1c243c406e45b8a32b0061d182d,

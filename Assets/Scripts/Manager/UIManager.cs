@@ -52,7 +52,7 @@ public class UIManager : Singleton<UIManager>
         for (int i = 0; i < characterIcons.Length && i < ChessBoard.Instance.ally.Count; i++) 
         {
             characterIcons[i].onClick.AddListener(ChessBoard.Instance.ally[i].Select);
-            characterIcons[i].image.sprite = ChessBoard.Instance.ally[i].GetComponent<Creature>().render.sprite;
+            characterIcons[i].image.sprite = ChessBoard.Instance.ally[i].GetComponent<Creature>().iconImage;
         }
     }
 

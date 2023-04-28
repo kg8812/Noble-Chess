@@ -17,7 +17,6 @@ public class DiamondBudha : MonoBehaviour,IOnNewTurn
             {
                 amp = gameObject.AddComponent<Amplification>();
             }
-
             amp.count++;
 
             Frality fr = GetComponent<Frality>();
@@ -35,7 +34,6 @@ public class DiamondBudha : MonoBehaviour,IOnNewTurn
                 tn = gameObject.AddComponent<Toughness>();
             }
             tn.count++;
-
             Destroy(GetComponent<Amplification>());
         }
         else

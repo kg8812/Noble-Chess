@@ -10,6 +10,7 @@ public class Buff : MonoBehaviour, IOnEndTurn
     public Sprite image;    
     public string description { get; protected set; }
     public string statusName { get; protected set; }
+    protected StatusManager sm { get { return StatusManager.Instance; } }
     public virtual void EndTurn()
     {
         count--;

@@ -36,15 +36,13 @@ public class Angeleos : Skill
         {
             if (targetList[i].CompareTag("Ally"))
             {
-                Revival rv = gameObject.AddComponent<Revival>();
-                AddBuff(rv, 2);
-                Destroy(rv);
+                Revival rv = status.revival;
+                AddBuff(rv, 2);                
             }
             else if (targetList[i].CompareTag("Enemy"))
             {
-                Snare sn = gameObject.AddComponent<Snare>();
-                AddBuff(sn, 2);
-                Destroy(sn);
+                Snare sn = status.snare;
+                AddBuff(sn, 2);               
             }
         }
     }

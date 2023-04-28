@@ -14,7 +14,7 @@ public class Skill : MonoBehaviour
     public ChessSquare targetSquare;
     public ChessPiece targetPiece;
     protected List<ChessPiece> targetList = new List<ChessPiece>();
-
+    protected StatusManager status { get { return StatusManager.Instance; } }
     public bool isImmediate = false;
     public int StartCD { get { return startCD; } }
     public int NormalCD { get { return normalCD; } }
@@ -98,7 +98,7 @@ public class Skill : MonoBehaviour
     protected void AddBuff(Buff buff,int count)
     {
         if (targetPiece == null) return;
-
+        
         Buff b = targetPiece.gameObject.GetComponent(buff.GetType()) as Buff;
         if (b != null)
         {
@@ -107,6 +107,7 @@ public class Skill : MonoBehaviour
         else
         {
             b = targetPiece.gameObject.AddComponent(buff.GetType()) as Buff;
+            b.image = buff.image;
             b.count = count;
         }
     }

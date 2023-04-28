@@ -10,6 +10,7 @@ public class FoxFireStack : Buff
         count = 0;
         statusName = "여우불";
         description = "스택만큼 특정 스킬의 데미지가 증가한다";
+        image = sm.foxFireStack.image;
     }
 
     public override void EndTurn()
