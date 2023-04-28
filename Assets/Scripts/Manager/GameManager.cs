@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TurnManager;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     public bool isPlayerTurn { get; private set; }
-    private bool isGameOver;
+    public bool isGameOver { get; private set; }
 
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         isGameOver = false;
@@ -15,7 +20,9 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void ChangeTurn()
-    {       
+    {
+        if (isGameOver) return;
+
         isPlayerTurn = !isPlayerTurn;
 
         if (isPlayerTurn)
@@ -31,8 +38,20 @@ public class GameManager : Singleton<GameManager>
         ChessBoard.Instance.ColorReset();
     }
 
-    public void GameOver()
+    public void GameOver(bool isWin)
     {
         isGameOver = true;
+        UIManager.Instance.GameOverUI(isWin);
+    }
+
+    public void GameReset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Start();
+    }
+
+    public void EndGame()
+    {
+        Application.Quit();
     }
 }

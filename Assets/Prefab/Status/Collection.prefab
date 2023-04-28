@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: eb7ad9dfaa6a1e3468cac36ca681738b, type: 3}

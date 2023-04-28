@@ -16,5 +16,15 @@ public class Boss2 : Enemy
                 ChessBoard.Instance.enemy[i].GetComponent<HealPassive>().healTarget = this;
             }          
         }
-    }   
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        if (CurHp <= 0)
+        {
+            GameManager.Instance.GameOver(true);
+        }
+    }
 }

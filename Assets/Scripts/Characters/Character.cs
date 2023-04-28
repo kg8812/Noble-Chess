@@ -67,12 +67,15 @@ public class Character : Creature,IOnNewTurn
         }
     }  
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         try
         {
+            if (ChessBoard.Instance != null)
             ChessBoard.Instance.ally.Remove(piece);
-            Destroy(hpBar.gameObject);
+
+            if (hpBar != null)
+                Destroy(hpBar.gameObject);
         }
         catch(Exception e)
         {

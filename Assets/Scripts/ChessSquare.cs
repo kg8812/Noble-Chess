@@ -101,6 +101,8 @@ public class ChessSquare : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameManager.Instance.isGameOver) return;
+
         ChessPiece selected = ChessBoard.Instance.selected?.piece;
 
         switch (State)

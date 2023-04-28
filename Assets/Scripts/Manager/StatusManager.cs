@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class StatusManager : Singleton<StatusManager>
 {
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
     public Amplification amplification;  //증폭
     public Frality frality;    //취약
     public Toughness toughness; // 강인함

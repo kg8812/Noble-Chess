@@ -20,6 +20,7 @@ public class UIManager : Singleton<UIManager>
     public GameObject cancelButton;
     public Image turnImage;
     public Image turnImage2;
+    public GameOverUI gameOver;
 
     public Text turnCount;
     public StatusDescription statusDescription;
@@ -78,5 +79,11 @@ public class UIManager : Singleton<UIManager>
 
         yield return new WaitForSeconds(1);
         specialSkillUI.gameObject.SetActive(false);
+    }
+
+    public void GameOverUI(bool isWin)
+    {
+        gameOver.gameObject.SetActive(true);
+        gameOver.Set(isWin);
     }
 }

@@ -50,14 +50,17 @@ public class Enemy : Creature,IOnNewTurn
         return false;
     }   
    
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         try
         {
-            Destroy(hpBar.gameObject);
+            if (hpBar != null)
+                Destroy(hpBar.gameObject);
+
             for(int i = 0; i < skills.Length; i++)
             {
-                Destroy(skills[i].gameObject);
+                if (skills[i] != null)
+                    Destroy(skills[i].gameObject);
             }            
         }
         catch(Exception e)
