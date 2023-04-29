@@ -5,12 +5,20 @@ using UnityEngine;
 public class Buff : MonoBehaviour, IOnEndTurn
 {
     public int count = 0;
-    protected ChessPiece piece { get { return GetComponent<ChessPiece>(); } }
-    protected Creature cr { get { return GetComponent<Creature>(); } }
+    protected ChessPiece piece;
+    protected Creature cr { get; private set; }
     public Sprite image;    
     public string description { get; protected set; }
     public string statusName { get; protected set; }
     protected StatusManager sm { get { return StatusManager.Instance; } }
+
+
+    protected virtual void Awake()
+    {
+        cr = GetComponent<Creature>();
+        piece = GetComponent<ChessPiece>();
+    }
+
     public virtual void EndTurn()
     {
         count--;

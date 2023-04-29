@@ -41,7 +41,8 @@ public class KramavWhip : Skill
         base.Use();
 
         for (int i = 0; i < squares.Count; i++)
-        {          
+        {
+            targetPiece = squares[i].piece;
             AddTarget();            
         }
 

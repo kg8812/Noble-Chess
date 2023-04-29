@@ -10,7 +10,7 @@ public class TurnManager : Singleton<TurnManager>
     public bool isSkillUsed = false;    
 
     Queue<Skill> skillQueue = new Queue<Skill>();
-    bool isSkill = false;
+    public bool isSkill { get; private set; } = false;
     public Skill selectedSkill = null;
     int count = 0;
 
