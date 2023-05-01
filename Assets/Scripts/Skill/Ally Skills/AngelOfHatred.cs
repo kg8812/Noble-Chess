@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AngelOfHatred : Skill
-{
-    public AnimationClip clip;
-
+{  
     public override void Ready()
     {
         base.Ready();

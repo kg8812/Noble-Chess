@@ -22,8 +22,8 @@ public class GripOfSin : Skill
         x = targetSquare.index1;
         y = targetSquare.index2;
         ChessPiece piece = cr.GetComponent<ChessPiece>();
-                     
-        piece.StartMove(targetSquare);
+
+        StartCoroutine(piece.StartMove(targetSquare));
         Amplification amp = gameObject.AddComponent<Amplification>();
 
         for (int i = x - 1; i <= x + 1; i++)

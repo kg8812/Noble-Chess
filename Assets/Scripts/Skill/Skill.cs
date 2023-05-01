@@ -56,6 +56,8 @@ public class Skill : MonoBehaviour
         get { return cr.GetComponent<ChessPiece>().square; }
     }
     public GameObject effect;
+    public AnimationClip clip;
+
     public virtual void Use()
     {      
         CurCD = NormalCD;
@@ -133,7 +135,10 @@ public class Skill : MonoBehaviour
 
     public virtual IEnumerator ShowEffect()
     {
-        yield break;
+        GameObject obj = Instantiate(effect,cr.transform);
+        obj.transform.position = Vector3.zero;
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
     }
    
 }

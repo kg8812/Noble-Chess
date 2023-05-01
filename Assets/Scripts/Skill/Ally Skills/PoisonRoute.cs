@@ -48,7 +48,13 @@ public class PoisonRoute : Skill
 
         if (0 < x && board.Squares[x - 1, y].piece == null && isUsed)
         {
-            cr.GetComponent<ChessPiece>().StartMove(x - 1, y);
+            StartCoroutine(cr.GetComponent<ChessPiece>().StartMove(x - 1, y));
         }
+    }
+    public override IEnumerator ShowEffect()
+    {
+        GameObject obj = Instantiate(effect, cr.transform.position, effect.transform.rotation);
+        
+        yield return null;
     }
 }

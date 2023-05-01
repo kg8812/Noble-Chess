@@ -8,7 +8,7 @@ public class ReadyEffect : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(bullet.gameObject, transform.position, transform.rotation);
+        Instantiate(bullet.gameObject, transform.position, bullet.transform.rotation);
     }
 
 

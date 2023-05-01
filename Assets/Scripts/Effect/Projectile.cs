@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     float lerpTime;
     Animator animator;
     bool isDestroyed = false;
+    
     public void Destroy()
     {
         Destroy(gameObject);
@@ -22,11 +23,15 @@ public class Projectile : MonoBehaviour
         moveTime = 1f;
         lerpTime = 0;    
         animator = GetComponent<Animator>();
+
+        Vector3 dir = transform.rotation.eulerAngles;
+        transform.LookAt(endPos);
+        transform.rotation = Quaternion.Euler(dir + transform.rotation.eulerAngles);
     }
     private void Update()
     {
         if (lerpTime < moveTime)
-        {
+        {                       
             lerpTime += Time.deltaTime;
             transform.position = Vector3.Lerp(startPos, endPos, lerpTime / moveTime);
         }

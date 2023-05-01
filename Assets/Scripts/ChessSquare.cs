@@ -53,6 +53,8 @@ public class ChessSquare : MonoBehaviour
             {
                 StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
             }
+
+            yield return StartCoroutine(skill.ShowEffect());
             skill.Use();
         }
         else
@@ -108,7 +110,7 @@ public class ChessSquare : MonoBehaviour
         switch (State)
         {
             case SquareState.Move:
-                selected.StartMove(index1, index2);
+                StartCoroutine(selected.StartMove(index1, index2));
                 TurnManager.Instance.isMoved = true;
                 ChessBoard.Instance.Cancel();
                 ChessBoard.Instance.ColorReset();

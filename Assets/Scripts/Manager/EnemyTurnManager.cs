@@ -195,7 +195,7 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
         int idx1 = selected.GetComponent<EnemyChessPiece>().mIdx1;
         int idx2 = selected.GetComponent<EnemyChessPiece>().mIdx2;
 
-        selected.StartMove(idx1, idx2);
+        StartCoroutine(selected.StartMove(idx1, idx2));
 
         if (selected.GetComponent<Enemy>().CheckSkillUsable())
         {

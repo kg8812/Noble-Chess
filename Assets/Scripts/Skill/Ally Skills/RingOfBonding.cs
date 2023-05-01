@@ -39,7 +39,7 @@ public class RingOfBonding : Skill
         else if (!isFirst)
         {
             base.Use();
-            target.StartMove(targetSquare);
+            StartCoroutine(target.StartMove(targetSquare));
             isTwice = false;
             isFirst = true;
             target = null;

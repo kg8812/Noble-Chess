@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stabbing : Skill
-{
+{   
+    public GameObject effect2;
+
     public override void Ready()
     {
         base.Ready();
@@ -15,16 +17,28 @@ public class Stabbing : Skill
     }
     public override void Use()
     {
-        base.Use();
+        base.Use();        
+        Attack(100);
+    }
+
+    public override IEnumerator ShowEffect()
+    {
+        GameObject obj = Instantiate(effect,cr.transform);
+        obj.transform.position = cr.transform.position;
+
+        Vector3 dir = obj.transform.rotation.eulerAngles;
+        obj.transform.LookAt(targetPiece.transform);
+        obj.transform.rotation = Quaternion.Euler(dir + obj.transform.rotation.eulerAngles);
 
         int x = targetSquare.index1;
-        int y = targetSquare.index2;
+        int y = targetSquare.index2;       
 
         if (board.Squares[x - 1, y].piece == null)
         {
-            cr.GetComponent<ChessPiece>().StartMove(x - 1, y);
+            yield return StartCoroutine(cr.GetComponent<ChessPiece>().StartMove(x - 1, y));
         }
 
-        Attack(100);
+        Destroy(obj);
+        Instantiate(effect2, targetPiece.transform.position, effect2.transform.rotation);       
     }
 }

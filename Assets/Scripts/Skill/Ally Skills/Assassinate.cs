@@ -26,5 +26,5 @@ public class Assassinate : Skill
         }
 
         Attack(dmg);
-    }
+    }  
 }

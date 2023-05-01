@@ -56,7 +56,7 @@ public class ChessPiece : MonoBehaviour
         board.ColorReset();
     }
 
-    public void StartMove(int i, int j) // 이동 시작
+    public IEnumerator StartMove(int i, int j) // 이동 시작
     {
         square.tecticalImage.sprite = null;
         square.piece = null;
@@ -67,10 +67,10 @@ public class ChessPiece : MonoBehaviour
         pos2 = j;
         board.Cancel();
         board.ColorReset();
-        StartCoroutine(Move());
+        yield return StartCoroutine(Move());
     }
 
-    public void StartMove(ChessSquare sq)
+    public IEnumerator StartMove(ChessSquare sq)
     {
         int i = sq.index1;
         int j = sq.index2;
@@ -84,7 +84,7 @@ public class ChessPiece : MonoBehaviour
         pos2 = j;
         board.Cancel();
         board.ColorReset();
-        StartCoroutine(Move());
+        yield return StartCoroutine(Move());
     }
 
     public IEnumerator Move() // 이동 코루틴 함수

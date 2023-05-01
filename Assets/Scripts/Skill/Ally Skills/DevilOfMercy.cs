@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DevilOfMercy : Skill
-{  
-    public AnimationClip clip;
+{     
     public override void Ready()
     {
         base.Ready();

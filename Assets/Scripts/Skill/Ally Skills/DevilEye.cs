@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DevilEye : Skill
 {
-    public AnimationClip clip;
-
+    
     public override void Ready()
     {
         base.Ready();
