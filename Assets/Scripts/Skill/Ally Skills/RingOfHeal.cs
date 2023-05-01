@@ -34,7 +34,10 @@ public class RingOfHeal : Skill
 
                 targetPiece = board.Squares[i, j].piece;
 
-                AddTarget();
+                if (targetPiece?.GetComponent<Character>() != null)
+                {
+                    AddTarget();
+                }
                 
             }
         }
