@@ -29,7 +29,7 @@ public class SunSet : EnemySkill
         {
             for(int j = 0; j < 8; j++)
             {
-                if (board.Squares[i, j].piece != null && !board.Squares[i, j].piece.gameObject.CompareTag("Enemy"))
+                if (board.Squares[i, j].piece != null && board.Squares[i, j].piece.gameObject.CompareTag("Ally"))
                 {
                     targets.Add(board.Squares[i, j]);
                 }
@@ -40,14 +40,21 @@ public class SunSet : EnemySkill
     public override void Use()
     {
         base.Use();
-        for(int i = 0; i < targets.Count; i++)
+        try
         {
-            if (targets[i]?.piece == null) continue;
+            for (int i = 0; i < targets.Count; i++)
+            {                
+                Creature p = targets[i]?.piece?.character;
 
-            Creature p = targets[i].piece.character;
+                if (p == null) continue;
 
-            float dmg = targets[i].piece.GetComponent<IOnDamage>().OnHit(enemy.Atk * atk);
-            enemy.OnAttack(p, enemy.Atk * atk, dmg);
+                float dmg = targets[i].piece.GetComponent<IOnDamage>().OnHit(enemy.Atk * atk);               
+                enemy.OnAttack(p, enemy.Atk * atk, dmg);
+            }
+        }
+        catch
+        {
+            return;
         }
     }
 }
