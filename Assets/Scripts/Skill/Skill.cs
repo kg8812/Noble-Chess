@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class Skill : MonoBehaviour
@@ -135,8 +136,10 @@ public class Skill : MonoBehaviour
 
     public virtual IEnumerator ShowEffect()
     {
+        if (effect == null) yield break;
+
         GameObject obj = Instantiate(effect,cr.transform);
-        obj.transform.position = Vector3.zero;
+        obj.transform.position = cr.transform.position;
         yield return new WaitForSeconds(clip.length);
         Destroy(obj);
     }

@@ -205,7 +205,8 @@ MonoBehaviour:
   curHp: 2200
   atk: 280
   render: {fileID: 0}
-  portrait: {fileID: 21300000, guid: dca10e94c2b4db844a40c0b035da94af, type: 3}
+  portrait: {fileID: -6699659892812072223, guid: 63f8398b38d4dac499b1702161faeed9,
+    type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: 673c8e70833642444b30231da1c67afc, type: 3}
   barrier: 0
