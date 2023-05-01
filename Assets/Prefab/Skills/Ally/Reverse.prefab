@@ -50,8 +50,12 @@ MonoBehaviour:
   isImmediate: 1
   cr: {fileID: 0}
   isSpecial: 0
+  isTwice: 0
+  isPassive: 0
   skillImage: {fileID: 21300000, guid: 6fa3eb6923bf91041b91241b10ac0333, type: 3}
   skillName: "\uC804\uD658"
   description: "\uBC94\uC704 \uB0B4 \uC544\uAD70 \uD0DD\uD2F1\uCEEC\uACFC \uC704\uCE58\uB97C
     \uBCC0\uACBD\uD55C\uB2E4. \r\n\uADF8\uD6C4 \uBCC0\uACBD\uD55C \uC544\uAD70\uC5D0\uAC8C
     \uC99D\uD3ED 3 \uC744 \uBD80\uC5EC\uD55C\uB2E4.\r\n"
+  effect: {fileID: 6350674095646482140, guid: 2e82e505b41d600468c49d5b69367aeb, type: 3}
+  clip: {fileID: 7400000, guid: 491b16f66d5d7fe4591c2b5f4f6011aa, type: 2}

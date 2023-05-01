@@ -26,4 +26,17 @@ public class Reverse : Skill
             }
         }
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+
+        GameObject obj = Instantiate(effect, cr.transform);
+        GameObject obj2 = Instantiate(effect, targetPiece.transform);
+        obj.transform.position = cr.transform.position;
+        obj2.transform.position = targetPiece.transform.position;
+        yield return new WaitForEndOfFrame();
+        Destroy(obj,clip.length);
+        Destroy(obj2,clip.length);
+    }
 }
