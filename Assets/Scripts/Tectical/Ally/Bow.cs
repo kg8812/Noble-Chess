@@ -6,6 +6,7 @@ public class Bow : ChessPiece,IOnEndTurn
 {
     public Creature cr;
     int count;
+    public GameObject effect;
 
     protected override void Start()
     {
@@ -32,11 +33,18 @@ public class Bow : ChessPiece,IOnEndTurn
             }
         }
         count--;
-        if (count <= 0) Destroy(gameObject);
+        if (count <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void OnMouseDown()
+    protected override void OnDestroy()
     {
-        return;
+        base.OnDestroy();
+        GameObject obj = Instantiate(effect);
+        board.ally.Remove(this);
+
+        obj.transform.position = transform.position - new Vector3(0, 0, 0.5f);
     }   
 }

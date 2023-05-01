@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillEffect : MonoBehaviour
+public class EffectDestroy : MonoBehaviour
 {
     public AnimationClip clip;
     void Start()

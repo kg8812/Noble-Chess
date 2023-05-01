@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
     public ChessSquare target;
     Vector3 startPos;
     Vector3 endPos;
-    float moveTime;
+    public float moveTime;
     float lerpTime;
     Animator animator;
     bool isDestroyed = false;
@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
     {
         startPos = transform.position;
         endPos = target.transform.position;
-        moveTime = 1f;
+        moveTime = 0.5f;
         lerpTime = 0;    
         animator = GetComponent<Animator>();
 

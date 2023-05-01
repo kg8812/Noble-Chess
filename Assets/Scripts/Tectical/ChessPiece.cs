@@ -26,7 +26,7 @@ public class ChessPiece : MonoBehaviour
     [Header("이동속도")]
     public float moveSpeed = 1;
 
-    protected bool isFirstMove = true;
+    public bool isFirstMove = true;
 
     private void Awake()
     {
@@ -107,12 +107,10 @@ public class ChessPiece : MonoBehaviour
             transform.position += center;
             yield return new WaitForEndOfFrame();
         }
-        square.tecticalImage.sprite = tecticalImage;
-        
-        isFirstMove = false;
+        square.tecticalImage.sprite = tecticalImage;                
     }
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         try
         {

@@ -110,6 +110,7 @@ public class ChessSquare : MonoBehaviour
         switch (State)
         {
             case SquareState.Move:
+                selected.isFirstMove = false;
                 StartCoroutine(selected.StartMove(index1, index2));
                 TurnManager.Instance.isMoved = true;
                 ChessBoard.Instance.Cancel();
@@ -190,7 +191,7 @@ public class ChessSquare : MonoBehaviour
         {
             for (int j = 0; j < 8; j++)
             {
-                if ((board.Squares[i, j].piece?.gameObject.CompareTag("Ally")) ?? false)
+                if ((board.Squares[i, j].piece?.gameObject?.CompareTag("Ally")) ?? false)
                 {
                     min = Mathf.Min(min, board.action.GetDistance(this, board.Squares[i, j]));
                 }

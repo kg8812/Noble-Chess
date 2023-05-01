@@ -32,4 +32,14 @@ public class CreateBow : Skill
         board.SetPosition(bow);
 
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+
+        GameObject obj = Instantiate(effect);
+        obj.transform.position = targetSquare.transform.position - new Vector3(0,0,0.5f);
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
+    }
 }
