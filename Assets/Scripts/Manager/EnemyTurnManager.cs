@@ -79,11 +79,11 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
             {
                 if (skill.isSpecial)
                 {
-                    yield return StartCoroutine(TurnManager.Instance.SkillEffect(skill));
+                    yield return StartCoroutine(TurnManager.Instance.SkillProduction(skill));
                 }
                 else
                 {
-                    yield return StartCoroutine(UIManager.Instance.SetSkillEffect(skill));
+                    yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
                 }
                 skill.Use();
             }
@@ -117,11 +117,11 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
             if (skill == null) continue;
             if (skill.isSpecial)
             {
-                yield return StartCoroutine(TurnManager.Instance.SkillEffect(skill));
+                yield return StartCoroutine(TurnManager.Instance.SkillProduction(skill));
             }
             else
             {
-                yield return StartCoroutine(UIManager.Instance.SetSkillEffect(skill));
+                yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
             }
 
             yield return new WaitForSeconds(0.5f);

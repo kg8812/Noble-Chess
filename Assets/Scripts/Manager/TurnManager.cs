@@ -97,12 +97,14 @@ public class TurnManager : Singleton<TurnManager>
 
                 if (skill.isSpecial)
                 {
-                    yield return StartCoroutine(SkillEffect(skill));
+                    yield return StartCoroutine(SkillProduction(skill));
                 }
                 else
                 {
-                    yield return StartCoroutine(UIManager.Instance.SetSkillEffect(skill));
+                    yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
                 }
+                
+                yield return StartCoroutine(skill.ShowEffect());
                 skill.Use();
 
                 yield return new WaitForSeconds(0.5f);
@@ -114,7 +116,7 @@ public class TurnManager : Singleton<TurnManager>
         Time.timeScale = 1;
     }
 
-    public IEnumerator SkillEffect(Skill skill)
+    public IEnumerator SkillProduction(Skill skill)
     {
         Vector3 pos = skill.cr.transform.position - Camera.main.transform.position;
         Camera.main.transform.position += pos * 0.7f;

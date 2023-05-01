@@ -57,7 +57,7 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    public IEnumerator SetSkillEffect(Skill skill)
+    public IEnumerator SetSkillProduction(Skill skill)
     {
         SkillEffectUI obj = Instantiate(skillEffect,skill.cr.render.transform).GetComponent<SkillEffectUI>();
 

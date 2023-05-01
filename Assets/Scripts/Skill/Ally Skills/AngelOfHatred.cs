@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AngelOfHatred : Skill
 {
+    public AnimationClip clip;
+
     public override void Ready()
     {
         base.Ready();
@@ -40,5 +42,13 @@ public class AngelOfHatred : Skill
             targetPiece = targetList[i];
             Attack(360);
         }
+    }
+
+    public override IEnumerator ShowEffect()
+    {
+        GameObject obj = Instantiate(effect);
+        effect.transform.position = board.transform.position + new Vector3(5, 0, 5);
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
     }
 }

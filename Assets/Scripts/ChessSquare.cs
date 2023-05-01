@@ -47,11 +47,11 @@ public class ChessSquare : MonoBehaviour
                     ChessBoard.Instance.Cancel();
                     ChessBoard.Instance.ColorReset();
                 }
-                yield return StartCoroutine(TurnManager.Instance.SkillEffect(skill));
+                yield return StartCoroutine(TurnManager.Instance.SkillProduction(skill));
             }
             else
             {
-                StartCoroutine(UIManager.Instance.SetSkillEffect(skill));
+                StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
             }
             skill.Use();
         }

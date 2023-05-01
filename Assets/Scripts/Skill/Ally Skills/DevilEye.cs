@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DevilEye : Skill
 {
+    public AnimationClip clip;
+
     public override void Ready()
     {
         base.Ready();
@@ -27,5 +29,16 @@ public class DevilEye : Skill
         }
 
         Attack(130);
+    }
+
+    public override IEnumerator ShowEffect()
+    {
+        GameObject obj = Instantiate(effect);
+        obj.transform.position = cr.transform.position;
+        ReadyEffect ready = obj.GetComponent<ReadyEffect>();
+        ready.bullet.target = targetSquare;
+        yield return new WaitForSeconds(clip.length);
+        ready.Fire();
+        Destroy(obj);
     }
 }

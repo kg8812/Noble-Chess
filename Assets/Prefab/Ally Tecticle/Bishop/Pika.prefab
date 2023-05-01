@@ -95,6 +95,7 @@ MonoBehaviour:
   portrait: {fileID: 21300000, guid: 3c473e03f03b7754086025a08c39f7fb, type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: 7a1521f7fb706e8469a3d61d2ed7f81f, type: 3}
+  barrier: 0
   target: {fileID: 0}
   skills:
   - {fileID: 7570143549646180458, guid: 2fda420817a90944fa6ea2630febbdc3, type: 3}
@@ -171,12 +172,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b15a116cf86df5640a09106a5ef49a9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13d67e8e753554d48853b9f9e09ac84d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5925, y: 1.9225}
+  m_Size: {x: 0.8779343, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

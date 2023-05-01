@@ -37,7 +37,7 @@ public class Birth : EnemySkill
             {
                 Skill skill = ChessBoard.Instance.enemy[i].GetComponent<Enemy>().skills[0];
                 skill.Use();
-                StartCoroutine(UIManager.Instance.SetSkillEffect(skill));
+                StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
             }
         }      
     }
