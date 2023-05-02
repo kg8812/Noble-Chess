@@ -7,13 +7,13 @@ public class ChessSquare : MonoBehaviour
 {
     public enum SquareState
     {
-        Normal = 0,
-        Move,
-        Attack,
-        Buff,
-        Place,
-        Select,
-        Range
+        Normal = 0, // 노말
+        Move,   // 이동
+        Attack, // 공격
+        Buff, // 버프
+        Place, // 설치
+        Select, // 선택됨
+        Range // 범위
     }
     public SquareState State = SquareState.Normal;
 
@@ -30,7 +30,7 @@ public class ChessSquare : MonoBehaviour
     private Sprite black;   // 흑칸 이미지
     public SpriteRenderer tecticalImage; // 기물 이미지 렌더러
 
-    IEnumerator ReserveSkill()
+    IEnumerator ReserveSkill() // 스킬 예약 함수
     {
         ChessPiece selected = ChessBoard.Instance.selected?.piece;
         Skill skill = TurnManager.Instance.selectedSkill;
