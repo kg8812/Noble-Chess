@@ -54,7 +54,7 @@ public class ChessSquare : MonoBehaviour
                 StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
             }
 
-            yield return StartCoroutine(skill.ShowEffect());
+            StartCoroutine(skill.ShowEffect());
             skill.Use();
         }
         else

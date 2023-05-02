@@ -45,12 +45,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startCD: 1
   normalCD: 1
-  target: {fileID: 0}
+  targetSquare: {fileID: 0}
+  targetPiece: {fileID: 0}
   isImmediate: 0
   cr: {fileID: 0}
-  curCD: 0
+  isSpecial: 0
+  isTwice: 0
+  isPassive: 0
   skillImage: {fileID: 4050103814281924687, guid: 6a556cd96f1b5cf44af7558c5d75fca6,
     type: 3}
   skillName: "\uB098\uBB34 \uCC3D"
   description: "\uBC94\uC704 \uB0B4\uC758 \uC801 1\uBA85\uC5D0\uAC8C \uACF5\uACA9\uB825
     100% \uD53C\uD574\uB97C \uC900\uB2E4"
+  effect: {fileID: 7204412230144159158, guid: 2246ca2dda6e15e4bb85d63323bd05dc, type: 3}
+  clip: {fileID: 7400000, guid: fb4e57d088771714f90f6d6b05fa2021, type: 2}
