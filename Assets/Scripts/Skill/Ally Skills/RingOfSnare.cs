@@ -24,7 +24,7 @@ public class RingOfSnare : Skill
         x = targetSquare.index1;
         y = targetSquare.index2;
 
-        Snare sn = gameObject.AddComponent<Snare>();
+        Snare sn = status.snare;
 
         for (int i = x - 1; i <= x + 1; i++)
         {
@@ -47,7 +47,6 @@ public class RingOfSnare : Skill
         {
             targetPiece = targetList[i];
             AddBuff(sn, 2);
-        }
-        Destroy(sn);
+        }        
     }
 }

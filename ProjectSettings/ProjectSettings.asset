@@ -626,7 +626,8 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -639,10 +640,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: db9755c9-300f-4806-9ac8-f86761fe1c02
+  cloudProjectId: a8e08618-5a22-4dc7-8cfb-f70c966fb8ea
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: NobleChess
+  organizationId: devsturn
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

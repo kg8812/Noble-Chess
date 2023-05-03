@@ -31,16 +31,18 @@ public class Angeleos : Skill
                 AddTarget();
             }
         }
-
+        
         for (int i = 0; i < targetList.Count; i++)
         {
+            targetPiece = targetList[i];
+
             if (targetList[i].CompareTag("Ally"))
-            {
-                Revival rv = status.revival;
+            {                
+                Revival rv = status.revival;               
                 AddBuff(rv, 2);                
             }
             else if (targetList[i].CompareTag("Enemy"))
-            {
+            {                
                 Snare sn = status.snare;
                 AddBuff(sn, 2);               
             }

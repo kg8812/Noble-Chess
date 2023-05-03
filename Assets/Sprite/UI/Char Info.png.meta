@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -6577236072851000063
     second: "\uCE90\uB9AD\uD130\uC815\uBCF4\uCC3D\uC785\u3141_0"
+  - first:
+      213: 1064054413028289655
+    second: Char Info_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -90,22 +93,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uCE90\uB9AD\uD130\uC815\uBCF4\uCC3D\uC785\u3141_0"
+      name: Char Info_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 244
         width: 685
         height: 685
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 105b4d1b3a6f8b4a0800000000000000
-      internalID: -6577236072851000063
+      spriteID: 77cec3ed9d744ce00800000000000000
+      internalID: 1064054413028289655
       vertices: []
       indices: 
       edges: []

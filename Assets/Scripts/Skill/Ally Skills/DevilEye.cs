@@ -35,7 +35,7 @@ public class DevilEye : Skill
         GameObject obj = Instantiate(effect);
         obj.transform.position = cr.transform.position;
         ReadyEffect ready = obj.GetComponent<ReadyEffect>();
-        ready.bullet.target = targetSquare;
+        ready.bullet.target = targetPiece;
         yield return new WaitForSeconds(clip.length);
         ready.Fire();
         Destroy(obj);

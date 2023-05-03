@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public ChessSquare target;
+    public ChessPiece target;
     Vector3 startPos;
     Vector3 endPos;
     public float moveTime;
