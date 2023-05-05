@@ -104,6 +104,7 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
 --- !u!114 &-2990090994032108932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +126,18 @@ MonoBehaviour:
   render: {fileID: 0}
   portrait: {fileID: 21300000, guid: be03e71a8d9768244a968910975bdf11, type: 3}
   isInvincible: 0
+  iconImage: {fileID: 21300000, guid: be03e71a8d9768244a968910975bdf11, type: 3}
+  barrier: 0
   skills:
   - {fileID: 1460087149182201870, guid: 52ab28d81629d6148be8c2309e08552d, type: 3}
   - {fileID: -8055591218760341745, guid: cd3fba8aeebf4a746b0b814ec3563e74, type: 3}
   - {fileID: 6032233587966034091, guid: 4f36879f8548b50429c1c6e112ada712, type: 3}
+  curSkill: {fileID: 0}
+  <description>k__BackingField: "\uC774\uB3D9\uACFC \uACF5\uACA9\uC744 \uCDE8\uD558\uC9C0
+    \uC54A\uB294\uB2E4.\r\n\uCCB4\uB825\uC774 1 \uC774\uD558\uB85C \uB5A8\uC5B4\uC9C0\uC9C0
+    \uC54A\uB294\uB2E4.\r\n5\uD134 \uB4A4\uC5D0 \uC885\uB9D0 \uD0C4\uC0DD \uC2A4\uD0AC\uC744
+    \uC2DC\uC804\uD55C\uB2E4.\r\n\uCCB4\uB825\uC774 1 \uC778 \uC0C1\uD0DC\uB85C \uD134
+    \uC2DC\uC791 \uC2DC \uB2E4\uC74C \uD398\uC774\uC988 \uB85C \uC774\uB3D9\uD55C\uB2E4.\r"
 --- !u!114 &6061849939986413830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 99999
+  image: {fileID: 0}
 --- !u!1 &8912530630465505619
 GameObject:
   m_ObjectHideFlags: 0

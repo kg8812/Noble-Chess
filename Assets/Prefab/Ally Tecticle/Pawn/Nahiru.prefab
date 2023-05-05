@@ -87,6 +87,7 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
 --- !u!54 &2774823215335878757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,10 +123,11 @@ MonoBehaviour:
   curHp: 2200
   atk: 180
   render: {fileID: 0}
-  portrait: {fileID: -227894097277103811, guid: 9d3f61af82b9988428b3494852095268,
+  portrait: {fileID: 3803259535641144274, guid: 9d3f61af82b9988428b3494852095268,
     type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: 657d6b819842b7c47964fcde766b97fe, type: 3}
+  barrier: 0
   target: {fileID: 0}
   skills:
   - {fileID: 8937102541087762025, guid: 206e59f8a2227924ea0b4a72a617679b, type: 3}

@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -6699659892812072223
     second: Rog_Wooden-removebg-preview_0
+  - first:
+      213: 3484729891261262730
+    second: Rog_Wooden-removebg-preview_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,6 +121,27 @@ TextureImporter:
       bones: []
       spriteID: 1ea3105e2d60603a0800000000000000
       internalID: -6699659892812072223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rog_Wooden-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 206
+        width: 199
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b20da8f5f3c5030800000000000000
+      internalID: 3484729891261262730
       vertices: []
       indices: 
       edges: []

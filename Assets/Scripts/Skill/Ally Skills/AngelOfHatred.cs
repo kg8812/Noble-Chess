@@ -45,7 +45,7 @@ public class AngelOfHatred : Skill
     public override IEnumerator ShowEffect()
     {
         GameObject obj = Instantiate(effect);
-        effect.transform.position = board.transform.position + new Vector3(5, 0, 5);
+        effect.transform.position = board.transform.position + new Vector3(3.5f, 0, 4);
         yield return new WaitForSeconds(clip.length);
         Destroy(obj);
     }

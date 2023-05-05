@@ -103,6 +103,7 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
 --- !u!114 &5413956279772271112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +123,8 @@ MonoBehaviour:
   curHp: 2000
   atk: 100
   render: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 75e3943e0f3e15b46af7c808db18e065, type: 3}
+  portrait: {fileID: -5234351781771674953, guid: 75e3943e0f3e15b46af7c808db18e065,
+    type: 3}
   isInvincible: 0
   iconImage: {fileID: 7515593386313203513, guid: f399b353634bee1438e2d74175f63385,
     type: 3}

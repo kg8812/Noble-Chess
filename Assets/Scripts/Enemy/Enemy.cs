@@ -7,7 +7,7 @@ public class Enemy : Creature,IOnNewTurn
 {   
     public EnemySkill[] skills;
     public EnemySkill curSkill;
-
+    [field:Header("적 설명")] [field:SerializeField] [field:TextArea] public string description { get; private set; }
     protected override void Awake()
     {
         base.Awake();
@@ -86,6 +86,28 @@ public class Enemy : Creature,IOnNewTurn
                 }
             }
         }
+    }
+
+    public Skill NextSkill()
+    {
+        Skill nextSkill = null;
+
+        for (int i = 0; i < skills.Length; i++)
+        {
+            if (skills[i].CurCD - 1 == 0)
+            {
+                if (nextSkill == null)
+                {
+                    nextSkill = skills[i];
+                }
+                else if (curSkill.Priority < skills[i].Priority)
+                {
+                    nextSkill = skills[i];
+                }
+            }
+        }
+
+        return nextSkill;
     }
     public EnemySkill UseSkill()
     {

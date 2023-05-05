@@ -170,5 +170,6 @@ public class ChessBoard : Singleton<ChessBoard>
 
         selected = null;
         UIManager.Instance.behaviourOption.SetActive(false);
+        UIManager.Instance.enemyStatus.SetActive(false);
     }
 }

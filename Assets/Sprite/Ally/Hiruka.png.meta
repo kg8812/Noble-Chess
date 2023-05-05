@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 1481732498464167550
     second: Haruka_0
+  - first:
+      213: -4244615071628070597
+    second: Hiruka_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,6 +112,27 @@ TextureImporter:
       bones: []
       spriteID: e76db175bdb209410800000000000000
       internalID: 1481732498464167550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiruka_0
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 299
+        width: 198
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31f65fc4191815c0800000000000000
+      internalID: -4244615071628070597
       vertices: []
       indices: 
       edges: []

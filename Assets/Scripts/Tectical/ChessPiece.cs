@@ -47,8 +47,16 @@ public class ChessPiece : MonoBehaviour
         board.Cancel();
         board.ColorReset();
         board.selected = square;
-        board.selected.State = ChessSquare.SquareState.Select;
-        UIManager.Instance.behaviourOption.SetActive(true);
+        board.selected.State = ChessSquare.SquareState.Select;        
+
+        if (board.selected.piece.CompareTag("Enemy"))
+        {
+            UIManager.Instance.enemyStatus.SetActive(true);
+        }
+        else if(board.selected.piece.CompareTag("Ally"))
+        {
+            UIManager.Instance.behaviourOption.SetActive(true);
+        }
     }
 
     public virtual void MoveReady() //이동 준비 

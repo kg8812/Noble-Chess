@@ -9,14 +9,11 @@ public class BehaviourUI : MonoBehaviour
     [SerializeField] Image hpbar;
     [SerializeField] GameObject statusPref;   
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
-    private void OnEnable()
+    protected virtual void OnEnable()
     {       
         UIManager.Instance.illustration.sprite = pi.GetComponent<Creature>().portrait;
         bool isEnemy = pi.gameObject.CompareTag("Enemy");
-
-        UIManager.Instance.moveButton.SetActive(!isEnemy);
-        UIManager.Instance.cancelButton.SetActive(!isEnemy);
-
+       
         Skill[] skills;
 
         SkillIcon[] selects = UIManager.Instance.skillIcons;
@@ -29,15 +26,9 @@ public class BehaviourUI : MonoBehaviour
         SetStatusIcons();
 
         sd.Set();
-
-        if (isEnemy)
-        {
-            skills = ChessBoard.Instance.selected.piece.GetComponent<Enemy>().skills;
-        }
-        else
-        {
-            skills = ChessBoard.Instance.selected.piece.character.skills;
-        }
+       
+        skills = ChessBoard.Instance.selected.piece.character.skills;
+        
         for (int i = 0; i < skills.Length; i++)
         {
             UIManager.Instance.skillIcons[i].skill = skills[i];
@@ -79,5 +70,10 @@ public class BehaviourUI : MonoBehaviour
     private void Update()
     {
         hpbar.fillAmount = pi.GetComponent<Creature>().CurHp / pi.GetComponent<Creature>().MaxHp;       
+    }
+
+    public void Close()
+    {
+        gameObject.SetActive(false);
     }
 }

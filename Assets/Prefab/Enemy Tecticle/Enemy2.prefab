@@ -72,10 +72,16 @@ MonoBehaviour:
   render: {fileID: 0}
   portrait: {fileID: 21300000, guid: f66e394c6709c2c4285ef20ff7848201, type: 3}
   isInvincible: 0
+  iconImage: {fileID: 21300000, guid: f66e394c6709c2c4285ef20ff7848201, type: 3}
+  barrier: 0
   skills:
   - {fileID: 8391809224937583563, guid: ef7c01c8048c8974c9479364b6cec1c1, type: 3}
   - {fileID: 4493123438424622211, guid: 023cd31421ff8b54486760794fbc0c2b, type: 3}
   - {fileID: 3636145564699931350, guid: 1d540e5032a29ec429432c58681f2445, type: 3}
+  curSkill: {fileID: 0}
+  <description>k__BackingField: "\uC0AC\uBA85\uC758 \uACF5\uACA9\uC740 \uCC9C\uC0C1\uCC9C
+    \uBA54\uB974\uC5D8\uC758 HP\uB97C \uD68C\uBCF5 \uC2DC\uD0A8\uB2E4.\r\n3\uD134
+    \uB9C8\uB2E4 \uAD11\uC5ED \uACF5\uACA9 \uC744 \uC2DC\uC804\uD55C\uB2E4.\r"
 --- !u!114 &3317735591299250678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +105,7 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
 --- !u!114 &4735323004057292232
 MonoBehaviour:
   m_ObjectHideFlags: 0

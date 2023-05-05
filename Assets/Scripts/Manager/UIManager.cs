@@ -24,7 +24,7 @@ public class UIManager : Singleton<UIManager>
 
     public Text turnCount;
     public StatusDescription statusDescription;
-
+    public GameObject enemyStatus;
     public void ShowText(string str,Color color, float time = 1)
     {
         turnImage.gameObject.SetActive(false);

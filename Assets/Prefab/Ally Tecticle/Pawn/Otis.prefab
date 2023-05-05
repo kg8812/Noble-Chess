@@ -87,6 +87,7 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
 --- !u!54 &2774823215335878757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,9 +123,11 @@ MonoBehaviour:
   curHp: 2000
   atk: 100
   render: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 69c27457d0ea1df4ca577b36d8b97141, type: 3}
+  portrait: {fileID: -2179904508194348680, guid: 69c27457d0ea1df4ca577b36d8b97141,
+    type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: 92bcf7b0d1db4644193e23cd3e7e4a67, type: 3}
+  barrier: 0
   target: {fileID: 0}
   skills:
   - {fileID: 7526403901011731856, guid: 364288672f27a1b42ba54ed98a589801, type: 3}
@@ -200,12 +203,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 69c27457d0ea1df4ca577b36d8b97141, type: 3}
+  m_Sprite: {fileID: -3569370224319962490, guid: 69c27457d0ea1df4ca577b36d8b97141,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5925, y: 1.9225}
+  m_Size: {x: 0.87015945, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
