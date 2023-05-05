@@ -11,8 +11,7 @@ public class UIManager : Singleton<UIManager>
     public GameObject attackCancelButton; // 공격 취소 버튼
     public SkillDescription skillDescription; // 스킬 설명창
     public SkillIcon[] skillIcons;   
-    public Image illustration;
-    public Button[] characterIcons;
+    public Image illustration;    
     public GameObject skillEffect;
     public GameObject hpBarPrefab;
     public SpecialEffectUI specialSkillUI;
@@ -25,6 +24,8 @@ public class UIManager : Singleton<UIManager>
     public Text turnCount;
     public StatusDescription statusDescription;
     public GameObject enemyStatus;
+    public BookUI bookUI;
+
     public void ShowText(string str,Color color, float time = 1)
     {
         turnImage.gameObject.SetActive(false);
@@ -46,16 +47,7 @@ public class UIManager : Singleton<UIManager>
     {
         yield return new WaitForSeconds(time);
         obj.SetActive(false);
-    }   
-    
-    public void SetCharacterIcons()
-    {
-        for (int i = 0; i < characterIcons.Length && i < ChessBoard.Instance.ally.Count; i++) 
-        {
-            characterIcons[i].onClick.AddListener(ChessBoard.Instance.ally[i].Select);
-            characterIcons[i].image.sprite = ChessBoard.Instance.ally[i].GetComponent<Creature>().iconImage;
-        }
-    }
+    }           
 
     public IEnumerator SetSkillProduction(Skill skill)
     {
@@ -85,5 +77,5 @@ public class UIManager : Singleton<UIManager>
     {
         gameOver.gameObject.SetActive(true);
         gameOver.Set(isWin);
-    }
+    }        
 }

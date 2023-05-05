@@ -7,8 +7,7 @@ public class JobOrder : MonoBehaviour
     void Start()
     {
         ChessBoard.Instance.Create();
-        CamManager.Instance.TCam();
-        UIManager.Instance.SetCharacterIcons();
+        CamManager.Instance.TCam();        
         TurnManager.Instance.StartTurn();
         EnemyTurnManager.Instance.StartJob();
     }   

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1508bc2524b79204392909bc36dd0ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCD: 5
+  startCD: 0
   normalCD: 5
   targetSquare: {fileID: 0}
   targetPiece: {fileID: 0}
@@ -59,3 +59,5 @@ MonoBehaviour:
     \uC21C\uAC04\uC774\uB3D9 \uC2DC\uD0A8\uB2E4.\r\n(\u201C\uC790\uB9AC\u201D\uB97C
     \uCC28\uC9C0\uD558\uACE0 \uC788\uB294 \uC704\uCE58\uB85C\uB294 \uC774\uB3D9\uD558\uC9C0
     \uBABB\uD55C\uB2E4.)\r"
+  effect: {fileID: 0}
+  clip: {fileID: 0}

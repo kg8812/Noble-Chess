@@ -59,6 +59,7 @@ public class TurnManager : Singleton<TurnManager>
         {
             ChessBoard.Instance.ally[i].character?.ResetReserve();
         }
+        UIManager.Instance.bookUI.Cancel();
     }
 
     public void ReserveSkill(Skill sk)
@@ -74,6 +75,7 @@ public class TurnManager : Singleton<TurnManager>
         skillQueue.Enqueue(selectedSkill);
         UIManager.Instance.allAttackButton.SetActive(true);
         UIManager.Instance.attackCancelButton.SetActive(true);
+        UIManager.Instance.bookUI.Add(selectedSkill);
 
         selectedSkill = null;
     }
@@ -101,7 +103,7 @@ public class TurnManager : Singleton<TurnManager>
 
                 yield return StartCoroutine(skill.ShowEffect());
                 skill.Use();
-
+                UIManager.Instance.bookUI.Remove();
                 yield return new WaitForSeconds(0.5f);
                 skill.targetSquare = null;
                 skill.targetPiece = null;
