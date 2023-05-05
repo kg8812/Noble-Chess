@@ -13,7 +13,8 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] GameObject nextSkill;
     [SerializeField] GameObject statusPref;
     [SerializeField] Image portrait;
-    [SerializeField] Text enemyDescription; 
+    [SerializeField] Text enemyDescription;
+    [SerializeField] Image hpbar;
 
 
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
@@ -51,6 +52,10 @@ public class EnemyStatus : MonoBehaviour
             StatusEffect se = Instantiate(statusPref, transform.Find("Status Effects").transform).GetComponent<StatusEffect>();
             se.Set(buffs[i]);
         }
+    }
+    private void Update()
+    {
+        hpbar.fillAmount = pi.GetComponent<Creature>().CurHp / pi.GetComponent<Creature>().MaxHp;
     }
     public void Close()
     {

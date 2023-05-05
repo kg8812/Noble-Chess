@@ -26,6 +26,7 @@ public class Skill : MonoBehaviour
     int curCD; // 현재 쿨타임
     public bool isSpecial = false; // 특별 스킬 (체크시 특별 이펙트 활성화)
     public bool isTwice = false; // 클릭이 두번 필요한 스킬 (유대의 고리같이 아군을 이동시키는 스킬 등)
+
     public int CurCD // 현재 쿨타임 프로퍼티
     {
         get { return curCD; }
@@ -87,7 +88,7 @@ public class Skill : MonoBehaviour
 
     protected bool Attack(float ratio) // 공격 함수, 공격전 타겟 선정 필요
     {
-        if (targetPiece?.GetComponent<Enemy>() != null)
+        if (targetPiece!=null && targetPiece.TryGetComponent(out Enemy enemy))
         {
             cr.GetComponent<Character>().Attack(targetPiece.GetComponent<Enemy>(),ratio);
             return true;
@@ -121,7 +122,7 @@ public class Skill : MonoBehaviour
 
     protected void AddBarrier(float amount) // 배리어 함수, 사용전 타겟 선정 필요
     {
-        if (targetPiece?.GetComponent<Character>() == null)
+        if (targetPiece == null || !targetPiece.TryGetComponent(out Character cr))
             return;
 
         Barrier b = targetPiece.GetComponent<Barrier>();
