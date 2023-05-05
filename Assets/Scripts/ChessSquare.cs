@@ -40,19 +40,15 @@ public class ChessSquare : MonoBehaviour
 
         if (skill.isImmediate)
         {
-            if (skill.isSpecial)
+
+            if (!skill.isTwice)
             {
-                if (!skill.isTwice)
-                {
-                    ChessBoard.Instance.Cancel();
-                    ChessBoard.Instance.ColorReset();
-                }
-                yield return StartCoroutine(TurnManager.Instance.SkillProduction(skill));
+                ChessBoard.Instance.Cancel();
+                ChessBoard.Instance.ColorReset();
             }
-            else
-            {
-                StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
-            }
+
+            StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+            yield return null;
 
             StartCoroutine(skill.ShowEffect());
             skill.Use();

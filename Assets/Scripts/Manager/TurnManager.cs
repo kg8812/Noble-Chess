@@ -7,7 +7,7 @@ public class TurnManager : Singleton<TurnManager>
 {
 
     public bool isMoved = false;
-    public bool isSkillUsed = false;    
+    public bool isSkillUsed = false;
 
     Queue<Skill> skillQueue = new Queue<Skill>();
     public bool isSkill { get; private set; } = false;
@@ -29,11 +29,11 @@ public class TurnManager : Singleton<TurnManager>
         {
             IOnNewTurn[] nt = ChessBoard.Instance.ally[i].GetComponents<IOnNewTurn>();
 
-            for(int j = 0; j < nt.Length; j++)
+            for (int j = 0; j < nt.Length; j++)
             {
                 nt[j].StartNewTurn();
             }
-        }            
+        }
     }
 
     public void ReadyToMove()
@@ -54,7 +54,7 @@ public class TurnManager : Singleton<TurnManager>
         UIManager.Instance.attackCancelButton.SetActive(false);
         UIManager.Instance.ShowText("예약을 취소합니다.", Color.red);
         UIManager.Instance.behaviourOption.SetActive(false);
-       
+
         for (int i = 0; i < ChessBoard.Instance.ally.Count; i++)
         {
             ChessBoard.Instance.ally[i].character?.ResetReserve();
@@ -63,7 +63,7 @@ public class TurnManager : Singleton<TurnManager>
 
     public void ReserveSkill(Skill sk)
     {
-        skillQueue.Enqueue(sk);       
+        skillQueue.Enqueue(sk);
         UIManager.Instance.allAttackButton.SetActive(true);
         UIManager.Instance.attackCancelButton.SetActive(true);
         selectedSkill = null;
@@ -74,12 +74,12 @@ public class TurnManager : Singleton<TurnManager>
         skillQueue.Enqueue(selectedSkill);
         UIManager.Instance.allAttackButton.SetActive(true);
         UIManager.Instance.attackCancelButton.SetActive(true);
-        
+
         selectedSkill = null;
     }
 
     public void StartUsingSkills()
-    {       
+    {
         StartCoroutine(UseSkills());
     }
     IEnumerator UseSkills()
@@ -95,22 +95,17 @@ public class TurnManager : Singleton<TurnManager>
             {
                 Skill skill = skillQueue.Dequeue();
 
-                if (skill.isSpecial)
-                {
-                    yield return StartCoroutine(SkillProduction(skill));
-                }
-                else
-                {
-                    yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
-                }
-                
+
+                yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+
+
                 yield return StartCoroutine(skill.ShowEffect());
                 skill.Use();
 
                 yield return new WaitForSeconds(0.5f);
                 skill.targetSquare = null;
                 skill.targetPiece = null;
-            }         
+            }
             isSkill = false;
         }
         Time.timeScale = 1;
@@ -122,9 +117,9 @@ public class TurnManager : Singleton<TurnManager>
         Camera.main.transform.position += pos * 0.7f;
         GameObject canvas = GameObject.Find("Canvas").gameObject;
         canvas.SetActive(false);
-        
+
         yield return StartCoroutine(UIManager.Instance.SetSpecialSkillEffect(skill));
-        
+
         Camera.main.transform.position -= pos * 0.7f;
         canvas.SetActive(true);
     }
@@ -141,13 +136,13 @@ public class TurnManager : Singleton<TurnManager>
         {
             UIManager.Instance.ShowText("스킬 예약 중입니다.", Color.red);
             return;
-        }       
+        }
 
-        for(int i = 0; i < ChessBoard.Instance.ally.Count; i++)
+        for (int i = 0; i < ChessBoard.Instance.ally.Count; i++)
         {
             IOnEndTurn[] et = ChessBoard.Instance.ally[i].GetComponents<IOnEndTurn>();
 
-            for(int j = 0; j < et.Length; j++)
+            for (int j = 0; j < et.Length; j++)
             {
                 et[j].EndTurn();
             }

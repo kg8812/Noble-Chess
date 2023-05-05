@@ -165,7 +165,16 @@ public class ChessBoard : Singleton<ChessBoard>
     {
         if (selected != null)
         {
-            selected.State = ChessSquare.SquareState.Normal;
+            for(int i = 0; i < 8; i++)
+            {
+                for(int j=0;j< 8; j++)
+                {
+                    if (Squares[i,j].piece == selected.piece)
+                    {
+                        Squares[i, j].State = ChessSquare.SquareState.Normal;
+                    }
+                }
+            }           
         }
 
         selected = null;

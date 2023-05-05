@@ -47,7 +47,17 @@ public class ChessPiece : MonoBehaviour
         board.Cancel();
         board.ColorReset();
         board.selected = square;
-        board.selected.State = ChessSquare.SquareState.Select;        
+        for(int i = 0; i < 8; i++)
+        {
+            for(int j = 0; j < 8; j++)
+            {
+                if (board.Squares[i,j].piece == board.selected.piece)
+                {
+                    board.Squares[i, j].State = ChessSquare.SquareState.Select;
+                }
+            }
+        }
+        //board.selected.State = ChessSquare.SquareState.Select;        
 
         if (board.selected.piece.CompareTag("Enemy"))
         {
