@@ -31,7 +31,10 @@ public class DevilOfMercy : Skill
         for(int i=0;i<targetList.Count;i++)
         {
             targetPiece = targetList[i];
-            targetList[i].gameObject.AddComponent<RBlood>();
+            if (targetPiece.gameObject.GetComponent<RBlood>() == null)
+            {
+                targetPiece.gameObject.AddComponent<RBlood>();
+            }
             Attack(140);
         }
     }
