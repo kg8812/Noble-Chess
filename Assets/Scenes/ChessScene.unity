@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab1e0720fb6e8948874c341d3926ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reservedSkill: {fileID: 1707526294151142989, guid: 6564fa9dc4c7d8c4a8ad7b3f456e7e26,
+    type: 3}
 --- !u!114 &86305866 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1491507144, guid: 6322e1bbeffe4fb47ba3d858adddd7c9,
@@ -3962,6 +3964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Book UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723993696759904137, guid: 9a8be1c243c406e45b8a32b0061d182d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a8be1c243c406e45b8a32b0061d182d, type: 3}

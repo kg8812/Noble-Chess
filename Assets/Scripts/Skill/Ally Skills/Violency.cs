@@ -20,8 +20,8 @@ public class Violency : Skill
     public override void Use()
     {
         base.Use();
-        x = board.selected.index1;
-        y = board.selected.index2;
+        x = square.index1;
+        y = square.index2;
 
         for (int i = x + 1; i <= x + 2 ; i++) 
         {

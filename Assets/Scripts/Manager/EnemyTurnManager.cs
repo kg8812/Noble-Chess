@@ -77,14 +77,9 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
 
             if (skill != null && skill.IsUsable() && skill.isImmediate)
             {
-                if (skill.isSpecial)
-                {
-                    yield return StartCoroutine(TurnManager.Instance.SkillProduction(skill));
-                }
-                else
-                {
-                    yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
-                }
+
+                yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+
                 skill.Use();
             }
         }
@@ -115,14 +110,9 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
             Skill skill = skillQueue.Dequeue()?.GetComponent<Enemy>()?.UseSkill();
 
             if (skill == null) continue;
-            if (skill.isSpecial)
-            {
-                yield return StartCoroutine(TurnManager.Instance.SkillProduction(skill));
-            }
-            else
-            {
-                yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
-            }
+
+            yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+
 
             yield return new WaitForSeconds(0.5f);
         }

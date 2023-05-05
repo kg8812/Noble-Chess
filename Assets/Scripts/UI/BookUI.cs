@@ -11,7 +11,7 @@ public class BookUI : MonoBehaviour
 
     Image[] images = new Image[16];
     Queue<Skill> skillQueue = new Queue<Skill>();
-
+    public GameObject reservedSkill;
     void Start()
     {        
         grid = GetComponent<GridLayoutGroup>();
@@ -25,10 +25,9 @@ public class BookUI : MonoBehaviour
 
         for(int i = 0; i < 16; i++)
         {
-            Image image = Instantiate(new GameObject(), transform).AddComponent<Image>();
-            image.gameObject.AddComponent<ReservedSkill>();
+            Image image = Instantiate(reservedSkill,transform).GetComponent<Image>();                        
             images[i] = image;
-            image.gameObject.SetActive(false);
+            image.gameObject.SetActive(false);           
         }
     }  
 
