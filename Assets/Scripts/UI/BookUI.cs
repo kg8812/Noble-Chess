@@ -26,6 +26,7 @@ public class BookUI : MonoBehaviour
         for(int i = 0; i < 16; i++)
         {
             Image image = Instantiate(new GameObject(), transform).AddComponent<Image>();
+            image.gameObject.AddComponent<ReservedSkill>();
             images[i] = image;
             image.gameObject.SetActive(false);
         }
@@ -35,6 +36,7 @@ public class BookUI : MonoBehaviour
     {
         images[skillQueue.Count].gameObject.SetActive(true);
         images[skillQueue.Count].sprite = skill.cr.iconImage;
+        images[skillQueue.Count].GetComponent<ReservedSkill>().Set(skill);
         skillQueue.Enqueue(skill);              
     }
 
@@ -54,7 +56,8 @@ public class BookUI : MonoBehaviour
         int i = 0;
         foreach( Skill skill in skillQueue)
         {
-            images[i++].sprite = skill.cr.iconImage;
+            images[i].GetComponent<ReservedSkill>().Set(skill);
+            images[i++].sprite = skill.cr.iconImage;         
         }
 
         images[i].gameObject.SetActive(false);

@@ -13,5 +13,9 @@ public class StatusDescription : MonoBehaviour
         statusName.text = buff.statusName;
         description.text = buff.description;
     }
-  
+    public void Set(Skill skill)
+    {
+        statusName.text = skill.skillName;
+        description.text = skill.description;
+    }
 }

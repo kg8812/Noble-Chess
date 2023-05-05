@@ -9,6 +9,7 @@ public class StatusEffect : MonoBehaviour,IPointerExitHandler,IPointerEnterHandl
     [SerializeField] Image statusImage;
     [SerializeField] Text duration;
     public Buff buff { get; private set; }
+    
     StatusDescription description { get { return UIManager.Instance.statusDescription; } }
     public void OnPointerExit(PointerEventData eventData)
     {
@@ -27,7 +28,7 @@ public class StatusEffect : MonoBehaviour,IPointerExitHandler,IPointerEnterHandl
     }
     public void Set(Buff bf)
     {
-        this.buff = bf;
+        buff = bf;
         statusImage.sprite = bf.image;
         duration.text = bf.count.ToString();
     }
