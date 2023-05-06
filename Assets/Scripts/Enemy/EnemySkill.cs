@@ -39,7 +39,7 @@ public abstract class EnemySkill : Skill
         int index = 0;
         
         float min = targets[0].piece.character.CurHp;
-
+        
         for (int i = 1; i < targets.Count; i++)
         {
             float hp = targets[i].piece.character.CurHp;

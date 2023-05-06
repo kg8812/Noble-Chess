@@ -51,6 +51,9 @@ public class RingOfSnare : Skill
     }
     public override IEnumerator ShowEffect()
     {
+        x = targetSquare.index1;
+        y = targetSquare.index2;
+
         for (int i = x - 1; i <= x + 1; i++)
         {
             if (!(0 <= i && i < 8)) continue;
