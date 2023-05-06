@@ -11,7 +11,8 @@ public class HpBar : MonoBehaviour
     RectTransform rectTransform;
     private void Start()
     {
-        rectTransform = GetComponent<RectTransform>(); 
+        rectTransform = GetComponent<RectTransform>();
+        transform.SetAsFirstSibling();
     }
     // Update is called once per frame
     void Update()

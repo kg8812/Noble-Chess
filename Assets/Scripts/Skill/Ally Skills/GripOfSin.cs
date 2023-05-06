@@ -49,4 +49,16 @@ public class GripOfSin : Skill
         }
         Destroy(amp);
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+        
+        GameObject obj = Instantiate(effect, cr.transform);
+        obj.transform.position = cr.transform.position;
+        obj.transform.localPosition = new Vector3(0, 0, -0.5f);
+
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);        
+    }
 }

@@ -29,4 +29,16 @@ public class BurstBullet : Skill
 
         isEnhance = false;
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+        if (cr == null) yield break;
+
+        GameObject obj = Instantiate(effect, cr.transform);
+        obj.transform.position = cr.transform.position;
+        obj.transform.position += new Vector3(1.5f, 0, 1);
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
+    }
 }

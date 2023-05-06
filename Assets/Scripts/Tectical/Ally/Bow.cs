@@ -36,15 +36,8 @@ public class Bow : ChessPiece,IOnEndTurn
         if (count <= 0)
         {
             Destroy(gameObject);
+            GameObject obj = Instantiate(effect);
+            obj.transform.position = transform.position - new Vector3(0, 0, 0.5f);
         }
-    }
-
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
-        GameObject obj = Instantiate(effect);
-        board.ally.Remove(this);
-
-        obj.transform.position = transform.position - new Vector3(0, 0, 0.5f);
-    }   
+    }  
 }

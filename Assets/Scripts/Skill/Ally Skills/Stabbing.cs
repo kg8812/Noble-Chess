@@ -23,6 +23,8 @@ public class Stabbing : Skill
 
     public override IEnumerator ShowEffect()
     {
+        if (targetPiece == null) yield break;
+
         GameObject obj = Instantiate(effect,cr.transform);
         obj.transform.position = cr.transform.position;
 

@@ -57,3 +57,5 @@ MonoBehaviour:
   description: "\uD544\uB4DC \uB0B4 \uC6D0\uD558\uB294 9\uCE78 \uB113\uC774\uC5D0
     \uC704\uCE58\uD55C \uC544\uAD70 \uD0DD\uD2F1\uCEEC\uC758 HP \uB97C \uB300\uC0C1\uC758
     \uCD5C\uB300\uCCB4\uB825 20% \uB9CC\uD07C \uD68C\uBCF5 \uD55C\uB2E4.\r"
+  effect: {fileID: 5290562709299238433, guid: 56463801d834c90489517f1b33f67828, type: 3}
+  clip: {fileID: 7400000, guid: cf60bfb7efcb3b24a8b3c56dfb0fdbbb, type: 2}

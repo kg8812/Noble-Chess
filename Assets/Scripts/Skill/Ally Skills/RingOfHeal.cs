@@ -53,4 +53,12 @@ public class RingOfHeal : Skill
             }
         }
     }
+
+    public override IEnumerator ShowEffect()
+    {       
+        GameObject obj = Instantiate(effect, targetSquare.transform);
+        obj.transform.position = targetSquare.transform.position;
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
+    }
 }

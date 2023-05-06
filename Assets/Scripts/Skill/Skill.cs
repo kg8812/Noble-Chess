@@ -141,7 +141,7 @@ public class Skill : MonoBehaviour
     public virtual IEnumerator ShowEffect() // 이펙트 함수, 기본적으로 캐릭터 위치에 생성되며 위치 조절이 필요할시 오버라이딩 필요
     {
         if (effect == null) yield break;
-
+        if (cr == null) yield break;
         GameObject obj = Instantiate(effect,cr.transform);
         obj.transform.position = cr.transform.position;
         yield return new WaitForSeconds(clip.length);

@@ -7,8 +7,15 @@ public class GameOverUI : MonoBehaviour
 {
     public GameObject winImage;
     public GameObject loseImage;
+    public Button restart;
+    public Button exit;
     Image bg { get { return GetComponent<Image>(); } }
 
+    private void Start()
+    {
+        restart.onClick.AddListener(GameManager.Instance.GameReset);
+        exit.onClick.AddListener(GameManager.Instance.EndGame);
+    }
     public void Set(bool IsWin)
     {
         if (IsWin)

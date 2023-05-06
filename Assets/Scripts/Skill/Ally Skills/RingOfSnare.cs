@@ -49,4 +49,33 @@ public class RingOfSnare : Skill
             AddBuff(sn, 2);
         }        
     }
+    public override IEnumerator ShowEffect()
+    {
+        for (int i = x - 1; i <= x + 1; i++)
+        {
+            if (!(0 <= i && i < 8)) continue;
+
+            for (int j = y - 1; j <= y + 1; j++)
+            {
+                if (!(0 <= j && j < 8)) continue;
+
+                targetPiece = board.Squares[i, j].piece;
+
+                if (targetPiece?.GetComponent<Enemy>() != null)
+                {
+                    AddTarget();
+                }
+            }
+        }
+
+        for (int i = 0; i < targetList.Count; i++)
+        {
+            if (targetList[i] == null) continue;
+            GameObject obj = Instantiate(effect, targetList[i].transform);
+            obj.transform.position = targetList[i].transform.position;
+            Destroy(obj, clip.length);
+        }
+
+        yield return new WaitForSeconds(clip.length);
+    }
 }

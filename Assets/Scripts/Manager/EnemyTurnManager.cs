@@ -80,6 +80,7 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
 
                 yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
 
+                yield return skill.ShowEffect();
                 skill.Use();
             }
         }
@@ -107,13 +108,14 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
     {
         while (skillQueue.Count > 0)
         {
-            Skill skill = skillQueue.Dequeue()?.GetComponent<Enemy>()?.UseSkill();
+            Skill skill = skillQueue.Dequeue()?.GetComponent<Enemy>().curSkill;
 
             if (skill == null) continue;
 
             yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+            yield return skill.ShowEffect();
 
-
+            skill.Use();
             yield return new WaitForSeconds(0.5f);
         }
     }

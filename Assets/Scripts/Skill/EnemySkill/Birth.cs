@@ -29,7 +29,7 @@ public class Birth : EnemySkill
     public override void Use()
     {
         base.Use();
-        Creature c = board.Replace(square.piece, obj).GetComponent<Creature>();
+        board.Replace(square.piece, obj).TryGetComponent(out Creature c);
 
         for (int i = 0; i < ChessBoard.Instance.enemy.Count; i++)
         {

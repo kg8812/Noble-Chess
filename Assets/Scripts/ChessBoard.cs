@@ -86,6 +86,8 @@ public class ChessBoard : Singleton<ChessBoard>
 
         for (int i = 0; i < ally.Count; i++)
         {
+            if (!ally[i].CompareTag("Ally")) continue;
+
             if (ally[i].GetComponent<Creature>().Name == c1.GetComponent<Creature>().Name)
             {
                 ally[i] = c2;
@@ -100,6 +102,8 @@ public class ChessBoard : Singleton<ChessBoard>
 
         for (int i = 0; i < enemy.Count; i++)
         {
+            if (!enemy[i].CompareTag("Enemy")) continue;
+
             if (enemy[i].GetComponent<Creature>().Name == c1.GetComponent<Creature>().Name)
             {
                 enemy[i] = c2;
@@ -136,11 +140,13 @@ public class ChessBoard : Singleton<ChessBoard>
     {
         for (int i = 0; i < ally.Count; i++)
         {
+            if (!ally[i].CompareTag("Ally")) continue;
             ally[i].GetComponent<Creature>().ChangeImage(is2D);
         }
 
         for (int i = 0; i < enemy.Count; i++)
         {
+            if (!enemy[i].CompareTag("Enemy")) continue;
             enemy[i].GetComponent<Creature>().ChangeImage(is2D);
         }
     }

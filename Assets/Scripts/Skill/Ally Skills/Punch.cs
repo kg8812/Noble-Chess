@@ -18,7 +18,7 @@ public class Punch : Skill
 
     public override IEnumerator ShowEffect()
     {
-        if (effect == null) yield break;
+        if (effect == null || targetPiece == null) yield break;
 
         GameObject obj = Instantiate(effect, cr.transform);
         obj.transform.position = targetPiece.transform.position;

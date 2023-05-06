@@ -21,12 +21,13 @@ public class HiveMind : Skill
         {
             if (!(0 <= i && i < 8)) continue;
 
-            if (board.Squares[i, y].piece.GetComponent<Enemy>())
+            if (board.Squares[i, y].piece != null && board.Squares[i, y].piece.TryGetComponent(out Enemy enemy))
             {
                 targetPiece = board.Squares[i, y].piece;
                 AddTarget();
             }
         }
+
         for (int i = 0; i < targetList.Count; i++)
         {
             targetPiece = targetList[i];
@@ -34,5 +35,32 @@ public class HiveMind : Skill
         }
         Destroy(sn);
 
+    }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+
+        for (int i = x + 1; i <= x + 2; i++)
+        {
+            if (!(0 <= i && i < 8)) continue;
+
+            if (board.Squares[i, y].piece !=null && board.Squares[i,y].piece.TryGetComponent(out Enemy enemy))
+            {
+                targetPiece = board.Squares[i, y].piece;
+                AddTarget();
+            }
+        }
+
+        for (int i = 0; i < targetList.Count; i++)
+        {
+            if (targetList[i] == null) continue;
+            GameObject obj = Instantiate(effect, targetList[i].transform);
+            obj.transform.position = targetList[i].transform.position;
+            Destroy(obj, clip.length);
+        }
+
+        yield return new WaitForSeconds(clip.length);
+        
     }
 }

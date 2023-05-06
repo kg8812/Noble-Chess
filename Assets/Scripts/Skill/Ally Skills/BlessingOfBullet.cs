@@ -27,4 +27,16 @@ public class BlessingOfBullet : Skill
 
         cr.GetComponent<BulletBuff>().count = 0;
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (cr == null) yield break;
+        GameObject ef = Instantiate(effect, cr.transform.position, effect.transform.rotation);
+
+        ef.transform.position = cr.transform.position;
+        
+        ef.transform.localScale = new Vector3(1.2f * (7 - x) / 7, 1, 1);
+        yield return new WaitForSeconds(clip.length);
+        Destroy(ef);
+    }
 }

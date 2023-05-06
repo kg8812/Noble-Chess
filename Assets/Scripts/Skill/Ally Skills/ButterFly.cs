@@ -22,4 +22,14 @@ public class ButterFly : Skill
             }
         }
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+        if (targetPiece == null) yield break;
+        GameObject obj = Instantiate(effect, cr.transform);
+        obj.transform.position = targetPiece.transform.position;
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
+    }
 }
