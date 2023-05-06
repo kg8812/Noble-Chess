@@ -77,6 +77,15 @@ public class Punishment : EnemySkill
 
         float dmg = targetSquare.piece.GetComponent<IOnDamage>().OnHit(enemy.Atk * 1.3f);
 
-        enemy.OnAttack(p, enemy.Atk*1.3f, dmg);
+        GameObject obj = Instantiate(effect, cr.transform);
+        obj.transform.position = targetSquare.transform.position;      
+        Destroy(obj,clip.length);
+        enemy.OnAttack(p, enemy.Atk * 1.3f, dmg);
+    }
+
+
+    public override IEnumerator ShowEffect()
+    {
+        yield return null;
     }
 }

@@ -45,4 +45,13 @@ public class Awakening : EnemySkill
         }
 
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+        if (cr == null) yield break;
+        GameObject obj = Instantiate(effect);
+        obj.transform.position = cr.transform.position;        
+        Destroy(obj,clip.length);
+    }
 }

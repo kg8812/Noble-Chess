@@ -36,9 +36,10 @@ public class Birth : EnemySkill
             if (ChessBoard.Instance.enemy[i].GetComponent<Creature>().Name == "숙명")
             {
                 Skill skill = ChessBoard.Instance.enemy[i].GetComponent<Enemy>().skills[0];
+                StartCoroutine(skill.ShowEffect());
                 skill.Use();
                 StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
             }
         }      
-    }
+    }   
 }

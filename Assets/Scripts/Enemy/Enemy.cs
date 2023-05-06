@@ -90,7 +90,7 @@ public class Enemy : Creature,IOnNewTurn
 
     public Skill NextSkill()
     {
-        Skill nextSkill = null;
+        EnemySkill nextSkill = null;
 
         for (int i = 0; i < skills.Length; i++)
         {
@@ -100,7 +100,7 @@ public class Enemy : Creature,IOnNewTurn
                 {
                     nextSkill = skills[i];
                 }
-                else if (curSkill.Priority < skills[i].Priority)
+                else if (nextSkill.Priority < skills[i].Priority)
                 {
                     nextSkill = skills[i];
                 }

@@ -85,8 +85,18 @@ public class Creation : EnemySkill
             int y = targets[rand].index2;
 
             ChessPiece cp = board.action.AddPiece(x, y, "사명", false);
+
+            GameObject obj = Instantiate(effect, cp.transform);
+            obj.transform.position = cp.transform.position;
+
             cp.GetComponent<HealPassive>().healTarget = enemy;
+            Destroy(obj, clip.length);
             count++;
         }                        
+    }
+
+    public override IEnumerator ShowEffect()
+    {
+        return null;
     }
 }

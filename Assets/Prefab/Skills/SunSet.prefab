@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b702e143055119c4884f747ea18b54c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCD: 0
+  startCD: 5
   normalCD: 5
   targetSquare: {fileID: 0}
   targetPiece: {fileID: 0}

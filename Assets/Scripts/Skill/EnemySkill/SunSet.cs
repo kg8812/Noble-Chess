@@ -57,4 +57,14 @@ public class SunSet : EnemySkill
             return;
         }
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+        if (cr == null) yield break;
+        GameObject obj = Instantiate(effect, GameObject.Find("Canvas2").transform);
+        obj.transform.position = cr.transform.position;
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
+    }
 }

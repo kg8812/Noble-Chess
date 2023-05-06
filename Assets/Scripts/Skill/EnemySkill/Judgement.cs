@@ -94,4 +94,14 @@ public class Judgement : EnemySkill
 
         }
     }
+
+    public override IEnumerator ShowEffect()
+    {
+        if (effect == null) yield break;
+        if (cr == null) yield break;
+        GameObject obj = Instantiate(effect, cr.transform);
+        obj.transform.position = cr.transform.position + new Vector3(0,0,-1.5f);
+        yield return new WaitForSeconds(clip.length);
+        Destroy(obj);
+    }
 }
