@@ -15,7 +15,7 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] Image portrait;
     [SerializeField] Text enemyDescription;
     [SerializeField] Image hpbar;
-
+    [SerializeField] Image skillRange;
 
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
 
@@ -23,7 +23,7 @@ public class EnemyStatus : MonoBehaviour
     {
         Enemy enemy = pi.GetComponent<Enemy>();
         enemyDescription.text = enemy.description;
-        Skill skill = enemy.NextSkill();
+        EnemySkill skill = enemy.NextSkill();
         portrait.sprite = pi.GetComponent<Creature>().portrait;
         if (skill != null)
         {
@@ -31,6 +31,9 @@ public class EnemyStatus : MonoBehaviour
             skillImage.sprite = skill.skillImage;
             skillName.text = skill.skillName;
             skillDescription.text = skill.description;
+
+            skillRange.gameObject.SetActive(skill.range != null);
+            skillRange.sprite = skill.range;
         }
         else
         {

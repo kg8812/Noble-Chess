@@ -59,5 +59,7 @@ MonoBehaviour:
   effect: {fileID: 8149651880996911092, guid: 90356c9366daf3f40b82509dbbf30652, type: 3}
   clip: {fileID: 7400000, guid: 1511ace97771fa148948f40555d404c9, type: 2}
   enemy: {fileID: 0}
+  <range>k__BackingField: {fileID: 21300000, guid: 77de3f3d78eef3948aeab1c57d4eb1c6,
+    type: 3}
   priority: 2
   atk: 9999

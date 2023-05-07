@@ -6,7 +6,7 @@ public abstract class EnemySkill : Skill
 {
     public Enemy enemy;
     protected List<ChessSquare> targets = new List<ChessSquare>();
-
+    [field:SerializeField] public Sprite range { get; private set; }
     [Header("스킬 우선도 (높을수록 빨리씀)")]
     [SerializeField] int priority;
     public int Priority { get { return priority; } }

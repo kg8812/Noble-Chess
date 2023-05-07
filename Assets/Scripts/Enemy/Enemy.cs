@@ -88,7 +88,7 @@ public class Enemy : Creature,IOnNewTurn
         }
     }
 
-    public Skill NextSkill()
+    public EnemySkill NextSkill()
     {
         EnemySkill nextSkill = null;
 
