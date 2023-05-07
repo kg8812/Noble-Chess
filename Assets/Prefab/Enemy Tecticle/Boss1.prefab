@@ -124,7 +124,7 @@ MonoBehaviour:
   curHp: 5500
   atk: 500
   render: {fileID: 0}
-  portrait: {fileID: 21300000, guid: be03e71a8d9768244a968910975bdf11, type: 3}
+  portrait: {fileID: 21300000, guid: 5bd284232b21f1648a0d7e4c8527ff03, type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: be03e71a8d9768244a968910975bdf11, type: 3}
   barrier: 0
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be03e71a8d9768244a968910975bdf11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60e3d7cee97ab5446b0865e414cafc58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

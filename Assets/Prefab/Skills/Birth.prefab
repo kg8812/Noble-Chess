@@ -52,13 +52,10 @@ MonoBehaviour:
   isSpecial: 1
   isTwice: 0
   isPassive: 0
-  skillImage: {fileID: 0}
+  skillImage: {fileID: 21300000, guid: 3235e6face0c45a4998e1cbd111f3620, type: 3}
   skillName: "\uD0C4\uC0DD"
-  description: "HP\uAC00 1 \uC77C\uB54C\uB9CC \uC0AC\uC6A9 \uAC00\uB2A5\r\n\u201C\uC2E0\uC758
-    \uACE0\uCE58\u201D \uBAAC\uC2A4\uD130 \uB97C \uC18C\uBA78 \uC2DC\uD0A4\uACE0
-    \r\uD574\uB2F9 \uC704\uCE58\uC5D0 \u201C\uCC9C\uC0C1\uCC9C \uBA54\uB974\uC5D8\u201D
-    \uC744 \r\uC18C\uD658\uD55C\uB2E4. \r\n\uADF8\uD6C4 \u201C\uC0AC\uBA85\u201D
-    \uBAAC\uC2A4\uD130 2\uAC1C\uCCB4\uB97C \uC18C\uD658\uD55C\uB2E4.\r"
+  description: "\uCC9C\uC0C1\uCC9C \uBA54\uB974\uC5D8\uB85C \uAC01\uC131\v\uD55C\uB2E4.
+    \v\uC0AC\uBA85\uC744 \uC18C\uD658\uD55C\uB2E4.\r\n"
   effect: {fileID: 5622925893789259925, guid: 940468ef2b3a39c48bda1e507039fbe8, type: 3}
   clip: {fileID: 7400000, guid: 36ccba240f81cce47873190133bbac1b, type: 2}
   enemy: {fileID: 0}

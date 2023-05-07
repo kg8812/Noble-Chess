@@ -52,11 +52,9 @@ MonoBehaviour:
   isSpecial: 0
   isTwice: 0
   isPassive: 0
-  skillImage: {fileID: 0}
+  skillImage: {fileID: 21300000, guid: 68e374a0bf039a543b7b107498a6ce1b, type: 3}
   skillName: "\uAC01\uC131"
-  description: "\uD544\uB4DC\uC5D0 \u201C\uCC9C\uC0C1\uCC9C \uBA54\uB974\uC5D8\u201D
-    \uC774 \uC874\uC7AC\r\uD55C\uB2E4\uBA74 \u201C\uC0AC\uBA85\u201D \uC73C\uB85C
-    \uBCC0\uD55C\uB2E4.\r"
+  description: "\uC0AC\uBA85 \uC73C\uB85C \uAC01\uC131\uD55C\uB2E4.\r"
   effect: {fileID: 5622925893789259925, guid: 940468ef2b3a39c48bda1e507039fbe8, type: 3}
   clip: {fileID: 7400000, guid: 36ccba240f81cce47873190133bbac1b, type: 2}
   enemy: {fileID: 0}
