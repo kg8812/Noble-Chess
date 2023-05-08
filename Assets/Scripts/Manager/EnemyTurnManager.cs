@@ -73,7 +73,7 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
     {
         for (int i = 0; i < pieces.Count; i++)
         {
-            EnemySkill skill = pieces[i].GetComponent<Enemy>().curSkill;
+            EnemySkill skill = pieces[i]?.GetComponent<Enemy>()?.curSkill;
 
             if (skill != null && skill.IsUsable() && skill.isImmediate)
             {
@@ -108,7 +108,7 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
     {
         while (skillQueue.Count > 0)
         {
-            Skill skill = skillQueue.Dequeue()?.GetComponent<Enemy>().curSkill;
+            Skill skill = skillQueue.Dequeue()?.GetComponent<Enemy>()?.curSkill;
 
             if (skill == null) continue;
 

@@ -62,7 +62,7 @@ public class SunSet : EnemySkill
     {
         if (effect == null) yield break;
         if (cr == null) yield break;
-        GameObject obj = Instantiate(effect, GameObject.Find("Canvas2").transform);
+        GameObject obj = Instantiate(effect);
         obj.transform.position = cr.transform.position;
         yield return new WaitForSeconds(clip.length);
         Destroy(obj);

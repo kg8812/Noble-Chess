@@ -322,8 +322,8 @@ Canvas:
   m_GameObject: {fileID: 264932480}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -331,8 +331,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1673420173
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &264932484
 RectTransform:
@@ -3182,7 +3182,7 @@ GameObject:
   - component: {fileID: 2092740760}
   - component: {fileID: 2092740759}
   - component: {fileID: 2092740763}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4427,6 +4427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711828116429760610, guid: e1aca358ef4149c46a4bbeddf56903f2,
+        type: 3}
+      propertyPath: orthographic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6711828116429760613, guid: e1aca358ef4149c46a4bbeddf56903f2,
         type: 3}
