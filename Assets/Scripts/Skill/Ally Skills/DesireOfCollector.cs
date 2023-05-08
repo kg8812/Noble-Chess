@@ -21,14 +21,11 @@ public class DesireOfCollector : Skill
     {
         base.Use();
 
-        Toughness tg = gameObject.AddComponent<Toughness>();
-        Amplification amp = gameObject.AddComponent<Amplification>();
+        Toughness tg = status.toughness;
+        Amplification amp = status.amplification;
 
         AddBuff(tg, 2);
-        AddBuff(amp, 2);
-
-        Destroy(tg);
-        Destroy(amp);
+        AddBuff(amp, 2);       
 
         Skill[] skills = targetPiece.GetComponent<Character>().skills;
 

@@ -36,12 +36,13 @@ public class Violency : Skill
             }
         }
 
+        FoxFireStack stack = cr.GetComponent<FoxFireStack>();
         for(int i = 0; i < targetList.Count; i++)
         {
             targetPiece = targetList[i];
             if (Attack(110))
             {
-                cr.GetComponent<FoxFireStack>().count += 2;
+                stack.count += 2;
             }
         }
     }

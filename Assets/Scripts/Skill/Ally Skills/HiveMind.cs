@@ -15,7 +15,7 @@ public class HiveMind : Skill
     public override void Use()
     {
         base.Use();
-        Snare sn = gameObject.AddComponent<Snare>();
+        Snare sn = status.snare;
 
         for (int i = x + 1; i <= x + 2; i++)
         {
@@ -32,9 +32,7 @@ public class HiveMind : Skill
         {
             targetPiece = targetList[i];
             AddBuff(sn, 1);
-        }
-        Destroy(sn);
-
+        }       
     }
 
     public override IEnumerator ShowEffect()

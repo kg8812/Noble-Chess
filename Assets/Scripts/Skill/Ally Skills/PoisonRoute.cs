@@ -39,10 +39,9 @@ public class PoisonRoute : Skill
                 targetPiece.gameObject.AddComponent<RBlood>();
             }
 
-            Frality fr = gameObject.AddComponent<Frality>();
+            Frality fr = status.frality;
             AddBuff(fr, 2);
-            Destroy(fr);
-
+            
             if (Attack(120)) isUsed = true;
         }
 

@@ -24,7 +24,7 @@ public class GripOfSin : Skill
         ChessPiece piece = cr.GetComponent<ChessPiece>();
 
         StartCoroutine(piece.StartMove(targetSquare));
-        Amplification amp = gameObject.AddComponent<Amplification>();
+        Amplification amp = status.amplification;
 
         for (int i = x - 1; i <= x + 1; i++)
         {
@@ -47,7 +47,6 @@ public class GripOfSin : Skill
             targetPiece = targetList[i];
             AddBuff(amp, 3);
         }
-        Destroy(amp);
     }
 
     public override IEnumerator ShowEffect()

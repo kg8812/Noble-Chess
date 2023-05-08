@@ -9,9 +9,8 @@ public class Reverse : Skill
         base.Use();
         board.action.Swap(cr.GetComponent<ChessPiece>().square, targetSquare);
 
-        Amplification amp = gameObject.AddComponent<Amplification>();
-        AddBuff(amp, 3);
-        Destroy(amp);       
+        Amplification amp = status.amplification;
+        AddBuff(amp, 3);           
     }
 
     public override void Ready()

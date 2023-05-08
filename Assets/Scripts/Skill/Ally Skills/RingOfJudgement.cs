@@ -24,7 +24,7 @@ public class RingOfJudgement : Skill
         x = targetSquare.index1;
         y = targetSquare.index2;
 
-        Amplification amp = gameObject.AddComponent<Amplification>();
+        Amplification amp = status.amplification;
 
         for (int i = x - 1; i <= x + 1; i++)
         {
@@ -47,9 +47,7 @@ public class RingOfJudgement : Skill
         {
             targetPiece = targetList[i];
             AddBuff(amp, 3);
-        }
-
-        Destroy(amp);
+        }      
     }
 
     public override IEnumerator ShowEffect()

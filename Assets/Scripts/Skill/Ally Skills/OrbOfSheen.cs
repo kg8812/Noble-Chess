@@ -23,9 +23,8 @@ public class OrbOfSheen : Skill
     {
         base.Use();
 
-        Weakness wk = gameObject.AddComponent<Weakness>();
-        AddBuff(wk, 1);
-        Destroy(wk);
+        Weakness wk = status.weakness;
+        AddBuff(wk, 1);       
 
         Attack(80);
 
