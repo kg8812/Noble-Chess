@@ -17,7 +17,8 @@ public class HpBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = cr.uiPos.position;
+        transform.position = Camera.main.WorldToScreenPoint(cr.uiPos.position);
+        
         hpBar.fillAmount = cr.CurHp / cr.MaxHp;
         float width = rectTransform.rect.width;
         whiteBar.fillAmount = cr.barrier / cr.MaxHp;

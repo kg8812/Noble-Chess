@@ -56,7 +56,7 @@ public class Creature : MonoBehaviour, IOnNewTurn, IOnDamage
     protected virtual void Start()
     {
         hpPrefab = UIManager.Instance.hpBarPrefab;       
-        hpBar = Instantiate(hpPrefab, FindObjectOfType<Canvas>().transform).GetComponent<HpBar>();
+        hpBar = Instantiate(hpPrefab, GameObject.Find("Canvas").transform).GetComponent<HpBar>();
         hpBar.cr = this;
     }
 
