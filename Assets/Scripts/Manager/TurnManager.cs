@@ -57,9 +57,14 @@ public class TurnManager : Singleton<TurnManager>
 
         for (int i = 0; i < ChessBoard.Instance.ally.Count; i++)
         {
-            ChessBoard.Instance.ally[i].character?.ResetReserve();
+            if (ChessBoard.Instance.ally[i].character == null) continue;
+
+            ChessBoard.Instance.ally[i].character.ResetReserve();
         }
+       
         UIManager.Instance.bookUI.Cancel();
+        ChessBoard.Instance.Cancel();
+        ChessBoard.Instance.ColorReset();
     }
 
     public void ReserveSkill(Skill sk)

@@ -70,15 +70,15 @@ SpriteRenderer:
   m_SortingLayerID: 1013934677
   m_SortingLayer: -1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0ecaf9d2fe8246c4aa6e58ad22672651, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.95, y: 0.95}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8377308912066710515
@@ -147,7 +147,7 @@ MonoBehaviour:
   piece: {fileID: 0}
   white: {fileID: 7744478615513283768, guid: 60ed6b36e34066e4b9a83fff9ee45216, type: 3}
   black: {fileID: 134966922359164640, guid: 60ed6b36e34066e4b9a83fff9ee45216, type: 3}
-  tecticalImage: {fileID: 3138979785805403915}
+  skillReservedImage: {fileID: 1025408250429962771}
 --- !u!212 &5196777491191883615
 SpriteRenderer:
   m_ObjectHideFlags: 0

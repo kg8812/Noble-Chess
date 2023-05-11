@@ -11,7 +11,6 @@ public class ChessPiece : MonoBehaviour
     public ChessSquare square;    // 현재 위치한 칸
     public Character character; // 현재 캐릭터
     
-    public Sprite tecticalImage; // 기물 이미지(바닥에 띄울것)
     public bool isMovable = false;
 
     public int width = 1;
@@ -75,8 +74,7 @@ public class ChessPiece : MonoBehaviour
     }
 
     public IEnumerator StartMove(int i, int j) // 이동 시작
-    {
-        square.tecticalImage.sprite = null;
+    {       
         square.piece = null;
         square = board.Squares[i, j];
         square.piece = this;
@@ -92,11 +90,10 @@ public class ChessPiece : MonoBehaviour
     {
         int i = sq.index1;
         int j = sq.index2;
-
-        square.tecticalImage.sprite = null;
+        
         square.piece = null;
         square = board.Squares[i, j];
-        square.piece = this;
+        square.piece = this;      
 
         pos1 = i;
         pos2 = j;
@@ -124,8 +121,7 @@ public class ChessPiece : MonoBehaviour
             transform.position = Vector3.Slerp(start, end, slerpTime / moveTime);
             transform.position += center;
             yield return new WaitForEndOfFrame();
-        }
-        square.tecticalImage.sprite = tecticalImage;                
+        }                      
     }
 
     protected virtual void OnDestroy()
@@ -139,8 +135,7 @@ public class ChessPiece : MonoBehaviour
                 for (int j = 0; j < 8; j++)
                 {
                     if (board.Squares[i, j].piece == this)
-                    {
-                        board.Squares[i, j].tecticalImage.sprite = null;
+                    {                      
                         board.Squares[i, j].piece = null;
                     }
                 }

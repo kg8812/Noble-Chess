@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class ChessSquare : MonoBehaviour
+public class ChessSquare : MonoBehaviour,IOnEndTurn
 {
     public enum SquareState
     {
@@ -28,11 +28,17 @@ public class ChessSquare : MonoBehaviour
     private Sprite white;   // 백칸 이미지
     [SerializeField]
     private Sprite black;   // 흑칸 이미지
-    public SpriteRenderer tecticalImage; // 기물 이미지 렌더러
+    public GameObject skillReservedImage; // 스킬 예약표시 이미지
 
     IEnumerator ReserveSkill() // 스킬 예약 함수
     {
-        ChessPiece selected = ChessBoard.Instance.selected?.piece;
+        ChessPiece selected = null;
+
+        if(ChessBoard.Instance.selected != null)
+        {
+            selected = ChessBoard.Instance.selected.piece;
+        }
+
         Skill skill = TurnManager.Instance.selectedSkill;
 
         skill.targetSquare = this;
@@ -57,6 +63,7 @@ public class ChessSquare : MonoBehaviour
         {
             selected.character.ReserveSkill();
         }
+        
 
         if (!skill.isTwice)
         {
@@ -69,7 +76,7 @@ public class ChessSquare : MonoBehaviour
     {
         Skill skill = TurnManager.Instance.selectedSkill;
 
-        if (TurnManager.Instance.isSkillUsed)
+        if (!skill.isImmediate && TurnManager.Instance.isSkillUsed)
         {
             UIManager.Instance.ShowText("이번턴에 스킬을 사용하였습니다.", Color.red);
             return false;
@@ -171,11 +178,36 @@ public class ChessSquare : MonoBehaviour
     void Start()
     {
         mat = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update()
     {
         ChangeColor();
+        if (piece == null)
+        {
+            skillReservedImage.SetActive(false);
+        }
+        else
+        {
+            Character cr = piece.GetComponent<Character>();
+
+            if (cr != null)
+            {
+                if (cr.isReserved || cr.isSkillUsed)
+                {
+                    skillReservedImage.SetActive(true);
+                }
+                else
+                {
+                    skillReservedImage.SetActive(false);
+                }
+            }
+            else
+            {
+                skillReservedImage.SetActive(false);
+            }
+        }
     }
 
     public int GetDistToAlly()
@@ -200,8 +232,7 @@ public class ChessSquare : MonoBehaviour
     public void SetPiece(ChessPiece piece)
     {
         this.piece = piece;
-        piece.square = this;
-        tecticalImage.sprite = piece.tecticalImage;
+        piece.square = this;       
     }
 
     public void Attack(float dmg, bool isAlly)
@@ -256,5 +287,9 @@ public class ChessSquare : MonoBehaviour
                 mat.color = Color.green;
                 break;
         }
+    }
+    public void EndTurn()
+    {
+        skillReservedImage.SetActive(false);
     }
 }

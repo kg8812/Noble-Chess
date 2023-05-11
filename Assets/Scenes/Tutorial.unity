@@ -331,8 +331,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1723410863
-  m_SortingOrder: 2
+  m_SortingLayerID: 1673420173
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &264932484
 RectTransform:
@@ -1448,6 +1448,59 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piece Factory
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemy.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 3456886672934596469, guid: 6832af319af8c2b41b7999fb9bf81e5d,
+        type: 3}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 3317735591299250678, guid: 05debde0324913c469c7759994ebf235,
+        type: 3}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemy.Array.data[2]
+      value: 
+      objectReference: {fileID: 3317735591299250678, guid: 05debde0324913c469c7759994ebf235,
+        type: 3}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemyPos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemyPos.Array.data[0].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemyPos.Array.data[1].x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemyPos.Array.data[1].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemyPos.Array.data[2].x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417691947212969874, guid: 41d81267efa6f5d48878d7982cd802ab,
+        type: 3}
+      propertyPath: enemyPos.Array.data[2].y
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8888067147600083735, guid: 41d81267efa6f5d48878d7982cd802ab,
         type: 3}

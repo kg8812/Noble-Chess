@@ -108,7 +108,7 @@ public class EnemyTurnManager : Singleton<EnemyTurnManager>
     {
         while (skillQueue.Count > 0)
         {
-            Skill skill = skillQueue.Dequeue()?.GetComponent<Enemy>()?.curSkill;
+            Skill skill = skillQueue.Dequeue().GetComponent<Enemy>().curSkill;
 
             if (skill == null) continue;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Character : Creature,IOnNewTurn
+public class Character : Creature,IOnNewTurn,IOnEndTurn
 {
     public bool isReserved { get; private set; }
     protected ChessPiece piece { get { return GetComponent<ChessPiece>(); } }
@@ -81,5 +81,11 @@ public class Character : Creature,IOnNewTurn
         {
             Debug.Log(e.Message);
         }
+    }
+
+    public void EndTurn()
+    {
+        isSkillUsed = false;
+        isReserved = false;
     }
 }
