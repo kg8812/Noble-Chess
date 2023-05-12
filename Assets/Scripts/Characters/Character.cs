@@ -83,7 +83,7 @@ public class Character : Creature,IOnNewTurn,IOnEndTurn
         }
     }
 
-    public void EndTurn()
+    public virtual void EndTurn()
     {
         isSkillUsed = false;
         isReserved = false;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class Mia : Character,IOnEndTurn
+public class Mia : Character
 {
     public BulletBuff bullet { get { return GetComponent<BulletBuff>(); } }
 
@@ -18,8 +18,10 @@ public class Mia : Character,IOnEndTurn
         base.Start();      
 
     }
-    public void EndTurn()
+    public override void EndTurn()
     {
+        base.EndTurn();
+
         if (bullet.count < 4) bullet.count++;
     }
 }
