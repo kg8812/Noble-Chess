@@ -104,7 +104,7 @@ public class ChessSquare : MonoBehaviour,IOnEndTurn
         return true;
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (GameManager.Instance.isGameOver) return;
 

@@ -4,7 +4,5 @@ using UnityEngine;
 
 public class TutoUI : MonoBehaviour
 {
-    public GameObject panel;
-    public string text;
-
+    
 }
