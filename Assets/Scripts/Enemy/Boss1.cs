@@ -20,5 +20,14 @@ public class Boss1 : Enemy
             skills[1].CurCD = 0;
             curSkill = skills[1];
         }
-    }   
+    }
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        if (CurHp <= 0 && !isMain)
+        {
+            GameManager.Instance.GameOver(true);
+        }
+    }
 }

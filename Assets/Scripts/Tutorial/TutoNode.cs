@@ -13,6 +13,9 @@ public class TutoNode : MonoBehaviour
     public Sprite sprite;
 
     int count = 0;
+
+    public GameObject desc1;
+    public GameObject desc2;
     
     public void Show(Image image)
     {
@@ -44,13 +47,19 @@ public class TutoNode : MonoBehaviour
     {
         UIManager.Instance.moveButton.GetComponent<Button>().onClick.Invoke();
     }
-    public void Six()
+    public void Six(bool isShow)
     {
         ChessBoard.Instance.Squares[2, 4].OnMouseDown();
+
+        if (isShow)
+        {
+            desc1.SetActive(true);
+        }
     }
     public void Seven()
     {
         UIManager.Instance.skillIcons[0].OnPointerDown(new PointerEventData(EventSystem.current));
+        desc1.SetActive(false);
     }
     public void Eight()
     {
@@ -70,7 +79,7 @@ public class TutoNode : MonoBehaviour
     }
     public void Twelve()
     {
-        ChessBoard.Instance.Squares[6, 3].OnMouseDown();
+        ChessBoard.Instance.Squares[5, 3].OnMouseDown();
     }
     public void Thirteen()
     {
