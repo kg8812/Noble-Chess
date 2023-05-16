@@ -260,15 +260,31 @@ public class ChessSquare : MonoBehaviour,IOnEndTurn
         switch (State)
         {
             case SquareState.Normal:
+                
                 if (isWhite)
                 {
+                    
                     mat.sprite = white;
+                    if (piece != null && piece.CompareTag("Enemy"))
+                    {
+                        mat.color = new Color(1, 0.5f, 0.5f);
+                    }
+                    else
                     mat.color = Color.white;
                 }
                 else
                 {
                     mat.sprite = black;
-                    mat.color = Color.white;
+
+                    if (piece != null && piece.CompareTag("Enemy"))
+                    {
+
+                        mat.color = new Color(1, 0.5f, 0.5f);
+                    }
+                    else
+                    {
+                        mat.color = Color.white;
+                    }
                 }
                 break;
             case SquareState.Move:
