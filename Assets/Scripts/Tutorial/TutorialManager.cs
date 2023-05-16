@@ -13,6 +13,9 @@ public class TutorialManager : MonoBehaviour
     public GameObject cover;
     public GameObject button;
     public GameObject uiCover;
+    public Image arrow;
+    public Sprite arrow1;
+    public Sprite arrow2;
 
     int count = 0;
     public void Next()
@@ -24,7 +27,7 @@ public class TutorialManager : MonoBehaviour
         if (count < list.Count)
         {
             text.text = list[count];
-            tutoNodes[count].Show(image);
+            tutoNodes[count].Show(image,arrow,arrow1,arrow2);
             count++;
             panel.position = Vector3.zero;
             panel.sizeDelta = new Vector2(1920, 1080);

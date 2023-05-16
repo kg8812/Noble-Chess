@@ -7,21 +7,45 @@ using UnityEngine.EventSystems;
 
 public class TutoNode : MonoBehaviour
 {
+    [Header("투명 이미지")]
     public Vector2 pos;
     public Vector2 size;
+
+    [Header("화살표")]
+    public Vector2 pos1;
+    public Vector2 size1;
+
     public UnityEvent action;
     public Sprite sprite;
-
-    int count = 0;
 
     public GameObject desc1;
     public GameObject desc2;
     
-    public void Show(Image image)
+    public void Show(Image image,Image arrow,Sprite arrow1,Sprite arrow2)
     {
         image.rectTransform.anchoredPosition = pos;
         image.rectTransform.sizeDelta = size;
         image.sprite = sprite;
+
+        if (size1.x > 0)
+        {
+            arrow.sprite = arrow2;
+            arrow.rectTransform.anchoredPosition = pos1;           
+            arrow.rectTransform.sizeDelta = size1;
+            arrow.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = size1;
+            float x = arrow.rectTransform.sizeDelta.x / 2;
+            float y = arrow.rectTransform.sizeDelta.y / 2;
+
+            arrow.transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(-x,y);
+        }
+        else
+        {           
+            arrow.sprite = arrow1;
+            arrow.rectTransform.anchoredPosition = new Vector2(780, -431);
+            arrow.rectTransform.sizeDelta = new Vector2(223, 101);            
+            arrow.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(223, 101);
+            arrow.transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        }
         action?.Invoke();
     }
 
