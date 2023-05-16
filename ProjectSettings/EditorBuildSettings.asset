@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ChessScene.unity
     guid: dd14226e7a28fa046931a93318bdd3c6
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 224e6e901e2823346bff01c9962edf36
   m_configObjects: {}

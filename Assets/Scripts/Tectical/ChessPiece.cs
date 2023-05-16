@@ -26,6 +26,7 @@ public class ChessPiece : MonoBehaviour
     public float moveSpeed = 1;
 
     public bool isFirstMove = true;
+    public Sprite tecticalImage;
 
     private void Awake()
     {

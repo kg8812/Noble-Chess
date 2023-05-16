@@ -122,7 +122,7 @@ public class TurnManager : Singleton<TurnManager>
     {
         Vector3 pos = skill.cr.transform.position - Camera.main.transform.position;
         Camera.main.transform.position += pos * 0.7f;
-        GameObject canvas = GameObject.Find("Canvas").gameObject;
+        GameObject canvas = GameObject.Find("Canvas");
         canvas.SetActive(false);
 
         yield return StartCoroutine(UIManager.Instance.SetSpecialSkillEffect(skill));

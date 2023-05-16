@@ -38,7 +38,7 @@ public class ShieldCrusher : Skill
         for (int i = 0; i < targetList.Count; i++)
         {
             targetPiece = targetList[i];
-            if (Attack(110))
+            if (Attack(150))
             {
                 FindObjectOfType<BurstBullet>().isEnhance = true;
             }

@@ -18,14 +18,14 @@ public class BurstBullet : Skill
     {
         base.Use();
 
-        float dmg = 100;
-        if (isEnhance) dmg += 10;
+        float dmg = 130;
+        if (isEnhance) dmg += 20;
 
         Attack(dmg);
 
         targetPiece = cr.GetComponent<ChessPiece>();
 
-        AddBarrier(cr.Atk * 0.1f);
+        AddBarrier(cr.Atk * 0.15f);
 
         isEnhance = false;
     }

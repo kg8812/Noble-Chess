@@ -39,7 +39,7 @@ public class Divine : Skill
         {
             targetPiece = targetList[i];
             Attack(90);
-            AddBarrier(cr.MaxHp * 0.1f);
+            AddBarrier(cr.MaxHp * 0.15f);
         }
     }
 }

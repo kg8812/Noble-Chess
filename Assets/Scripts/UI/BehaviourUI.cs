@@ -7,17 +7,19 @@ public class BehaviourUI : MonoBehaviour
 {
     [SerializeField] SkillDescription sd;
     [SerializeField] Image hpbar;
-    [SerializeField] GameObject statusPref;   
+    [SerializeField] GameObject statusPref;
+    [SerializeField] Image tecticalImage;
+
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
     protected virtual void OnEnable()
     {       
-        UIManager.Instance.illustration.sprite = pi.GetComponent<Creature>().portrait;
-        bool isEnemy = pi.gameObject.CompareTag("Enemy");
+        UIManager.Instance.illustration.sprite = pi.GetComponent<Creature>().portrait;        
        
         Skill[] skills;
 
         SkillIcon[] selects = UIManager.Instance.skillIcons;
 
+        tecticalImage.sprite = pi.tecticalImage;
         for(int i = 0; i < selects.Length; i++)
         {
             selects[i].select.SetActive(false);

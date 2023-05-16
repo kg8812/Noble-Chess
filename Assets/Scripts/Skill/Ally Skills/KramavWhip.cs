@@ -50,7 +50,7 @@ public class KramavWhip : Skill
         {
             targetPiece = targetList[i];
 
-            if (Attack(70))
+            if (Attack(120))
             {
                 Collection cl = cr.GetComponent<Collection>();
 

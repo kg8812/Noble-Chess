@@ -7,7 +7,7 @@ public class ButterFly : Skill
     public override void Use()
     {
         base.Use();
-        float amount = cr.CurHp * 0.05f;
+        float amount = cr.CurHp * 0.12f;
         Heal(amount);
     }
     public override void Ready()

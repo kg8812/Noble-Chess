@@ -28,8 +28,7 @@ public class AngelOfHatred : Skill
                 targetPiece = board.Squares[i, j].piece;
 
                 if (targetPiece?.GetComponent<RBlood>() != null)
-                {
-                    Destroy(targetPiece.GetComponent<RBlood>());
+                {                    
                     AddTarget();               
                 }
             }

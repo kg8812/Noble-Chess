@@ -21,7 +21,7 @@ public class BlessingOfBullet : Skill
     {
         base.Use();
 
-        float dmg = 120 + cr.GetComponent<BulletBuff>().count * 5;
+        float dmg = 120 + cr.GetComponent<BulletBuff>().count * 10;
 
         Attack(dmg);
 

@@ -104,9 +104,15 @@ public class TutoNode : MonoBehaviour
     public void Twelve()
     {
         ChessBoard.Instance.Squares[5, 3].OnMouseDown();
+        desc2.SetActive(true);
     }
     public void Thirteen()
     {
         TurnManager.Instance.EndTurn();
+    }
+
+    public void Off()
+    {
+        desc2.SetActive(false);
     }
 }

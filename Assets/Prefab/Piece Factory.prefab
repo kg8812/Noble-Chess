@@ -61,13 +61,9 @@ MonoBehaviour:
   - {fileID: 907957373966575636, guid: 164203bfb0a4e264c98a4d8720fd0d9f, type: 3}
   - {fileID: 907957373966575636, guid: fe9d4f348c60c164daa9497f5ce8edcc, type: 3}
   enemy:
-  - {fileID: 7358923131808867452, guid: f2a2fdf670c6b7e4fa651e4c6a6576e0, type: 3}
-  - {fileID: 7358923131808867452, guid: f2a2fdf670c6b7e4fa651e4c6a6576e0, type: 3}
-  - {fileID: 7358923131808867452, guid: f2a2fdf670c6b7e4fa651e4c6a6576e0, type: 3}
-  - {fileID: 7358923131808867452, guid: f2a2fdf670c6b7e4fa651e4c6a6576e0, type: 3}
-  - {fileID: 7358923131808867452, guid: f2a2fdf670c6b7e4fa651e4c6a6576e0, type: 3}
-  - {fileID: 7358923131808867452, guid: f2a2fdf670c6b7e4fa651e4c6a6576e0, type: 3}
-  - {fileID: 3456886672934596469, guid: 5f584ea0d09a0514cb71671504fc9e11, type: 3}
+  - {fileID: 3456886672934596469, guid: 6832af319af8c2b41b7999fb9bf81e5d, type: 3}
+  - {fileID: 3317735591299250678, guid: 05debde0324913c469c7759994ebf235, type: 3}
+  - {fileID: 3317735591299250678, guid: 05debde0324913c469c7759994ebf235, type: 3}
   allyPos:
   - {x: 0, y: 0}
   - {x: 0, y: 1}
@@ -86,13 +82,9 @@ MonoBehaviour:
   - {x: 1, y: 6}
   - {x: 1, y: 7}
   enemyPos:
-  - {x: 7, y: 0}
-  - {x: 7, y: 1}
   - {x: 7, y: 3}
-  - {x: 7, y: 4}
-  - {x: 7, y: 6}
-  - {x: 7, y: 7}
-  - {x: 6, y: 3}
+  - {x: 5, y: 3}
+  - {x: 5, y: 4}
   UnitList:
   - {fileID: 3456886672934596469, guid: 5f584ea0d09a0514cb71671504fc9e11, type: 3}
   - {fileID: 3456886672934596469, guid: 2586a0e4140d06249923b55aace548ad, type: 3}

@@ -16,6 +16,7 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] Text enemyDescription;
     [SerializeField] Image hpbar;
     [SerializeField] Image skillRange;
+    [SerializeField] Image tecticalImage;
 
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
 
@@ -25,6 +26,7 @@ public class EnemyStatus : MonoBehaviour
         enemyDescription.text = enemy.description;
         EnemySkill skill = enemy.NextSkill();
         portrait.sprite = pi.GetComponent<Creature>().portrait;
+        tecticalImage.sprite = pi.tecticalImage;
         if (skill != null)
         {
             nextSkill.SetActive(true);
