@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -14,7 +15,7 @@ public class UIManager : Singleton<UIManager>
     public Image illustration;    
     public GameObject skillEffect;
     public GameObject hpBarPrefab;
-    public SpecialEffectUI specialSkillUI;
+    public GameObject videoRawImage;
     public GameObject moveButton;
     public GameObject cancelButton;
     public Image turnImage;
@@ -25,6 +26,8 @@ public class UIManager : Singleton<UIManager>
     public StatusDescription statusDescription;
     public GameObject enemyStatus;
     public BookUI bookUI;
+
+    public VideoPlayer videoPlayer;
 
     public void ShowText(string str,Color color, float time = 1)
     {
@@ -64,13 +67,15 @@ public class UIManager : Singleton<UIManager>
 
     public IEnumerator SetSpecialSkillEffect(Skill skill)
     {
-        specialSkillUI.gameObject.SetActive(true);
-        
-        specialSkillUI.portrait.sprite = skill.cr.portrait;
-        specialSkillUI.skillName.text = skill.skillName;        
-
-        yield return new WaitForSeconds(1);
-        specialSkillUI.gameObject.SetActive(false);
+        videoRawImage.SetActive(true);
+        videoPlayer.clip = skill.video;
+        videoPlayer.Play();
+        if (videoPlayer.clip != null)
+        {
+            yield return new WaitForSeconds((float)videoPlayer.clip.length);
+        }
+        videoPlayer.Pause();
+        videoRawImage.SetActive(false);
     }
 
     public void GameOverUI(bool isWin)

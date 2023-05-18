@@ -102,9 +102,14 @@ public class TurnManager : Singleton<TurnManager>
             {
                 Skill skill = skillQueue.Dequeue();
 
-
-                yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
-
+                if (skill.isSpecial)
+                {
+                    yield return StartCoroutine(SkillProduction(skill));
+                }
+                else
+                {
+                    yield return StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+                }
 
                 yield return StartCoroutine(skill.ShowEffect());
                 skill.Use();

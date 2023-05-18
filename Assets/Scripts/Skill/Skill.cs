@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class Skill : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class Skill : MonoBehaviour
     public string skillName; // 스킬 이름
     [TextArea]
     public string description; // 스킬 설명
+
+    public VideoClip video;
+
     protected ChessBoard board // 체스판 인스턴스
     {
         get { return ChessBoard.Instance; }

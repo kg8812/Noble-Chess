@@ -59,6 +59,7 @@ MonoBehaviour:
     \uC21C\uAC04\uC774\uB3D9 \uC2DC\uD0A8\uB2E4.\r\n(\u201C\uC790\uB9AC\u201D\uB97C
     \uCC28\uC9C0\uD558\uACE0 \uC788\uB294 \uC704\uCE58\uB85C\uB294 \uC774\uB3D9\uD558\uC9C0
     \uBABB\uD55C\uB2E4.)\r"
+  video: {fileID: 32900000, guid: d3238e8d290402644b9642ee02947d51, type: 3}
   effect: {fileID: 4216137785144737604, guid: 898b740e8ae719b4da221ac53d5d421c, type: 3}
   clip: {fileID: 7400000, guid: 3903057f7884b4d4db73fe51b9745e61, type: 2}
   effect2: {fileID: 1710985705142586719, guid: f2191172d791e084d94103c6ce58d111, type: 3}

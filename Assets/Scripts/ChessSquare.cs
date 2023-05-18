@@ -53,9 +53,15 @@ public class ChessSquare : MonoBehaviour,IOnEndTurn
                 ChessBoard.Instance.ColorReset();
             }
 
-            StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
-            yield return null;
-
+            if (skill.isSpecial)
+            {
+                yield return StartCoroutine(UIManager.Instance.SetSpecialSkillEffect(skill));
+            }
+            else
+            {
+                StartCoroutine(UIManager.Instance.SetSkillProduction(skill));
+                yield return null;
+            }
             StartCoroutine(skill.ShowEffect());
             skill.Use();
         }

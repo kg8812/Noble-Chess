@@ -57,5 +57,6 @@ MonoBehaviour:
   description: "\uBC94\uC704 \uB0B4\uC5D0 \uC788\uB294 \uBAA8\uB4E0 \uC801 \uC5D0\uAC8C
     \uC18D\uBC15 2\uD134 \uBD80\uC5EC, \uBAA8\uB4E0 \uC544\uAD70\uC5D0\uAC8C \uC18C\uC0DD
     2 \uBD80\uC5EC\uB97C \uBD80\uC5EC\uD55C\uB2E4."
+  video: {fileID: 32900000, guid: 0c25d5fac3af7f84ea39f1291e72d56f, type: 3}
   effect: {fileID: 6986270815152333328, guid: 1b261c3895630514aa37d8d939774092, type: 3}
   clip: {fileID: 7400000, guid: 31224f8a1d7d6b64aa3558f9d10cc68b, type: 2}
