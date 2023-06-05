@@ -64,8 +64,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 0}
   character: {fileID: 0}
-  tecticalImage: {fileID: -8347706867593985385, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
-    type: 3}
   isMovable: 0
   width: 1
   height: 1
@@ -73,6 +71,9 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
+  tecticalImage: {fileID: -8347706867593985385, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
+    type: 3}
 --- !u!114 &974334950494485945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,9 +93,11 @@ MonoBehaviour:
   curHp: 2800
   atk: 400
   render: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3715042790091598429, guid: fba12002d09d3e74f9b066c5ecdb0ccc,
+    type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: 1b2bb579b9010974c9e63722931ac7de, type: 3}
+  barrier: 0
   target: {fileID: 0}
   skills:
   - {fileID: 8859580265489175144, guid: 0bf5fe0329872b74aa3af7e59b8b9316, type: 3}
@@ -171,15 +174,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -881617966821674516, guid: fba12002d09d3e74f9b066c5ecdb0ccc,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5925, y: 1.9225}
+  m_Size: {x: 0.7965, y: 0.8835}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5546174925009720732

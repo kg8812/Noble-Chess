@@ -161,8 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 0}
   character: {fileID: 0}
-  tecticalImage: {fileID: 6929476067907313406, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
-    type: 3}
   isMovable: 0
   width: 1
   height: 1
@@ -171,6 +169,8 @@ MonoBehaviour:
   jumpHeight: 3
   moveSpeed: 1
   isFirstMove: 1
+  tecticalImage: {fileID: 6929476067907313406, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
+    type: 3}
 --- !u!54 &2814119576847525061
 Rigidbody:
   m_ObjectHideFlags: 0

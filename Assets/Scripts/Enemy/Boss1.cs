@@ -9,6 +9,14 @@ public class Boss1 : Enemy
     protected override void Start()
     {
         base.Start();
+        if (isMain)
+        {
+            SoundManager.Instance.PlayBoss1();
+        }
+        else
+        {
+            SoundManager.Instance.PlayTutorial();
+        }
         GetComponent<ChessPiece>().isMovable = false;
         isMain = GetComponent<Revival>() != null;
     }

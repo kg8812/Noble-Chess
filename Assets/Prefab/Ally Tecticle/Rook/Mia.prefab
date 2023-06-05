@@ -101,15 +101,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8357249124537420870, guid: 034f298f31b650344825a15f4a796134,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5925, y: 1.9225}
+  m_Size: {x: 0.512, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2957274869407064264
@@ -160,8 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 0}
   character: {fileID: 0}
-  tecticalImage: {fileID: 6929476067907313406, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
-    type: 3}
   isMovable: 0
   width: 1
   height: 1
@@ -169,6 +168,9 @@ MonoBehaviour:
   pos2: 0
   jumpHeight: 3
   moveSpeed: 1
+  isFirstMove: 1
+  tecticalImage: {fileID: 6929476067907313406, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
+    type: 3}
 --- !u!54 &2814119576847525061
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -204,9 +206,11 @@ MonoBehaviour:
   curHp: 2200
   atk: 380
   render: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 4220543603516222648, guid: 0e984023fbf1b1f44a50de37f7861411,
+    type: 3}
   isInvincible: 0
   iconImage: {fileID: 21300000, guid: 32feecb7bf8000e48834c6d1aafed20a, type: 3}
+  barrier: 0
   target: {fileID: 0}
   skills:
   - {fileID: 6257271315362983253, guid: 517cb7551401f0c48a9037a674969178, type: 3}

@@ -7,6 +7,7 @@ public class Boss2 : Enemy
     protected override void Start()
     {
         base.Start();
+        SoundManager.Instance.PlayBoss2();
         GetComponent<ChessPiece>().isMovable = false;
         skills[0].Use();
         for(int i = 0; i < ChessBoard.Instance.enemy.Count; i++)
