@@ -56,8 +56,7 @@ public class UIManager : Singleton<UIManager>
     {
         SkillEffectUI obj = Instantiate(skillEffect,skill.cr.render.transform).GetComponent<SkillEffectUI>();
 
-        obj.pos = skill.cr.uiPos;
-        obj.characterImage.sprite = skill.cr.portrait;
+        obj.pos = skill.cr.uiPos;        
         obj.skillName.text = skill.skillName;
         obj.cr = skill.cr;
 

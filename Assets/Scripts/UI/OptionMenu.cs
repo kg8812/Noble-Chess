@@ -14,4 +14,18 @@ public class OptionMenu : MonoBehaviour
         Exit.onClick.AddListener(GameManager.Instance.EndGame);
     }
     
+    public void ToTitleMenu()
+    {
+        SceneMan.Instance.ToTitle();
+    }
+
+    public void RestartGame()
+    {
+        GameManager.Instance.GameReset();
+    }
+
+    public void ExitGame()
+    {
+        GameManager.Instance.EndGame();
+    }
 }

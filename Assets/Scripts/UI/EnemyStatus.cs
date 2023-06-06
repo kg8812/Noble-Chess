@@ -17,12 +17,14 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] Image hpbar;
     [SerializeField] Image skillRange;
     [SerializeField] Image tecticalImage;
+    [SerializeField] Text enemyName;
 
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
 
     void OnEnable()
     {
         Enemy enemy = pi.GetComponent<Enemy>();
+        enemyName.text = enemy.Name;
         enemyDescription.text = enemy.description;
         EnemySkill skill = enemy.NextSkill();
         portrait.sprite = pi.GetComponent<Creature>().portrait;

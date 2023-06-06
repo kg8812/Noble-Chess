@@ -9,12 +9,13 @@ public class BehaviourUI : MonoBehaviour
     [SerializeField] Image hpbar;
     [SerializeField] GameObject statusPref;
     [SerializeField] Image tecticalImage;
+    [SerializeField] Text tecticalName;
 
     ChessPiece pi { get { return ChessBoard.Instance.selected.piece; } }
     protected virtual void OnEnable()
     {       
-        UIManager.Instance.illustration.sprite = pi.GetComponent<Creature>().portrait;        
-       
+        UIManager.Instance.illustration.sprite = pi.GetComponent<Creature>().portrait;
+        tecticalName.text = pi.GetComponent<Creature>().Name;
         Skill[] skills;
 
         SkillIcon[] selects = UIManager.Instance.skillIcons;

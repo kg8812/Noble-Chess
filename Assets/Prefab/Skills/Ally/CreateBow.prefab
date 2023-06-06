@@ -62,4 +62,4 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: 5a826d068a060094c8e214de8d69a0ae, type: 3}
   effect: {fileID: 5391095104106954288, guid: 46bead345f719814bbe3936435d1fbd0, type: 3}
   clip: {fileID: 7400000, guid: b6ce6c0c0ca9d5149954d56bcd04b908, type: 2}
-  bow: {fileID: 1012643642060381080, guid: 895f7785eb5e0e0429ceb8f175977310, type: 3}
+  bow: {fileID: 9214988700134384185, guid: a6db8fe6f0c828f489bd80bd88978001, type: 3}

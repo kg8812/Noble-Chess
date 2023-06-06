@@ -103,7 +103,7 @@ MonoBehaviour:
   jumpHeight: 3
   moveSpeed: 1
   isFirstMove: 1
-  tecticalImage: {fileID: 6650358498219683936, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
+  tecticalImage: {fileID: -4821137678826489499, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
     type: 3}
 --- !u!114 &-2990090994032108932
 MonoBehaviour:

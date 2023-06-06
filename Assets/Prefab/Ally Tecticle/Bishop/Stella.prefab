@@ -72,7 +72,7 @@ MonoBehaviour:
   jumpHeight: 3
   moveSpeed: 1
   isFirstMove: 1
-  tecticalImage: {fileID: -8347706867593985385, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
+  tecticalImage: {fileID: 3652922739711436594, guid: 0654af6d9e1367f4ba644e1b2fedfa0b,
     type: 3}
 --- !u!114 &974334950494485945
 MonoBehaviour:
@@ -96,7 +96,7 @@ MonoBehaviour:
   portrait: {fileID: 3715042790091598429, guid: fba12002d09d3e74f9b066c5ecdb0ccc,
     type: 3}
   isInvincible: 0
-  iconImage: {fileID: 21300000, guid: 1b2bb579b9010974c9e63722931ac7de, type: 3}
+  iconImage: {fileID: 21300000, guid: 25ed96fb2e9a03a4ab48f503148835e2, type: 3}
   barrier: 0
   target: {fileID: 0}
   skills:

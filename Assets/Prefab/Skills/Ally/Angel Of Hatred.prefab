@@ -58,5 +58,6 @@ MonoBehaviour:
     \uBAA8\uB4E0 \uC801\uC5D0\uAC8C \r\n\uACF5\uACA9\uB825\uC5D0 360% \uD53C\uD574\uB97C
     \uC900\uB2E4.\r\n\uC801\uC911 \uB300\uC0C1\uC758 \uC794\uD608 \uD6A8\uACFC\uB97C
     \uC81C\uAC70\uD55C\uB2E4.\r"
+  video: {fileID: 32900000, guid: 261a8d5fa901d1940b1b6e69e286db8f, type: 3}
   effect: {fileID: 5324793981499820433, guid: fa3fd17f674fbd44a8093ec1748e1bc1, type: 3}
   clip: {fileID: 7400000, guid: af1edb1240d23a34daf977a1786ff8f7, type: 2}

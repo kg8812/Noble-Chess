@@ -8,7 +8,7 @@ public class SoundManager : Singleton<SoundManager>
 
     public AudioClip boss1;
     public AudioClip boss2;
-    public AudioClip main;
+    public AudioClip title;
     public AudioClip tutorial;
 
     protected override void Awake()
@@ -16,11 +16,12 @@ public class SoundManager : Singleton<SoundManager>
         base.Awake();
         DontDestroyOnLoad(this);
         source = GetComponent<AudioSource>();
+        source.clip = title;
     }
     
     public void PlayMain()
     {
-        source.clip = main;
+        source.clip = title;
         source.Play();
     }
     public void PlayTutorial()
