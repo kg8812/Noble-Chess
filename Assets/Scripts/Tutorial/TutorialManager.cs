@@ -44,6 +44,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
+        count = 0;
         Next();
     }   
 }

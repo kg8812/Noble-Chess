@@ -71,6 +71,7 @@ public class UIManager : Singleton<UIManager>
         videoPlayer.Play();
         if (videoPlayer.clip != null)
         {
+            videoPlayer.SetDirectAudioVolume(0, 0.5f);
             yield return new WaitForSeconds((float)videoPlayer.clip.length);
         }
         videoPlayer.Pause();

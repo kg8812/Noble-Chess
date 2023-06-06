@@ -9,6 +9,10 @@ public class Boss1 : Enemy
     protected override void Start()
     {
         base.Start();
+        
+        GetComponent<ChessPiece>().isMovable = false;
+        isMain = GetComponent<Revival>() != null;
+
         if (isMain)
         {
             SoundManager.Instance.PlayBoss1();
@@ -17,8 +21,6 @@ public class Boss1 : Enemy
         {
             SoundManager.Instance.PlayTutorial();
         }
-        GetComponent<ChessPiece>().isMovable = false;
-        isMain = GetComponent<Revival>() != null;
     }
     public override void StartNewTurn()
     {

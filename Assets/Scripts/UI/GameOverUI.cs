@@ -11,11 +11,6 @@ public class GameOverUI : MonoBehaviour
     public Button exit;
     Image bg { get { return GetComponent<Image>(); } }
 
-    private void Start()
-    {
-        restart.onClick.AddListener(GameManager.Instance.GameReset);
-        exit.onClick.AddListener(GameManager.Instance.EndGame);
-    }
     public void Set(bool IsWin)
     {
         if (IsWin)
@@ -32,6 +27,14 @@ public class GameOverUI : MonoBehaviour
         }
     }
 
-    
+    public void Restart()
+    {
+        GameManager.Instance.GameReset();
+    }
+
+    public void ToTitle()
+    {
+        SceneMan.Instance.ToTitle();
+    }
 
 }
