@@ -82,7 +82,7 @@ Noble Chess는 클래식 체스 규칙을 기반으로 하면서,
 
 <br/>
 
-([플레이 영상](https://www.youtube.com/watch?v=Kb9cGSEnlK4))
+([플레이 영상](https://youtu.be/s2HJL1vzYMQ))
 
 <br/>
 
