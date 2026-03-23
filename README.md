@@ -92,6 +92,6 @@ Noble Chess는 클래식 체스 규칙을 기반으로 하면서,
 
 ([게임 다운로드](https://github.com/kg8812/Noble-Chess/releases/tag/Release))
 
-> 압축 해제 후 .exe 파일을 실행하면 플레이할 수 있습니다.
+압축 해제 후 .exe 파일을 실행하면 플레이할 수 있습니다.
 
 ---
