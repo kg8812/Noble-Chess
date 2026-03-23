@@ -1,7 +1,7 @@
 # Noble Chess
 
-> 기획자 2명과 협업하여 제작한 체스 기반 전략 게임입니다.  
-> 체스 규칙과 캐릭터 스킬을 결합하고, 행동을 예약하여 실행하는 시스템을 구현했습니다.
+기획자 2명과 협업하여 제작한 체스 기반 전략 게임입니다.  
+체스 규칙과 캐릭터 스킬을 결합하고, 행동을 예약하여 실행하는 시스템을 구현했습니다.
 
 ---
 
@@ -82,7 +82,7 @@ Noble Chess는 클래식 체스 규칙을 기반으로 하면서,
 
 <br/>
 
-([링크](https://www.youtube.com/watch?v=Kb9cGSEnlK4))
+([플레이 영상](https://www.youtube.com/watch?v=Kb9cGSEnlK4))
 
 <br/>
 
@@ -90,7 +90,7 @@ Noble Chess는 클래식 체스 규칙을 기반으로 하면서,
 
 ## 🎮 다운로드
 
-👉 [게임 다운로드](Release 링크)
+([게임 다운로드](https://github.com/kg8812/Noble-Chess/releases/tag/Release))
 
 > 압축 해제 후 .exe 파일을 실행하면 플레이할 수 있습니다.
 
